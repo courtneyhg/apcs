@@ -4,4 +4,5 @@ public class Greet {
    } 
    static void greet(String str){
       System.out.println(str);
+   }
 }
