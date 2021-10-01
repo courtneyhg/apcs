@@ -19,13 +19,3 @@ public static void baffle() {
 public static void ping() {
     System.out.println(".");
 }
-
-1. The output of this program is:
-(When baffle is invoked, the system prints out "wug" and invokes ping. When ping is invoked, the system prints out ".")
-No, I wug.
-You wugga wug.
-I wug.
-
-2. Stack Diagram (I drew it on a piece of paper)
-
-3. If you invoke baffle at the end of the ping method, the program will continue running back and forth between ping and baffle.
