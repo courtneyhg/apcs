@@ -4,4 +4,7 @@ public class Greet {
     BigSib.greet("Flam");
     BigSib.greet("kazaam");
   }
+  static void greet(String str){
+      System.out.println(str);
+  }
 }
