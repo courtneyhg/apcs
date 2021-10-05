@@ -11,14 +11,11 @@
 
 public class Greet {
   public static void main (String [] args) {
-    System.out.println(BigSib.greet("Word up freshman"));
-    System.out.println(BigSib.greet("Salutations Dr. Spaceman"));
-    System.out.println(BigSib.greet("Hey ya Kong Fooey"));
-    System.out.println(BigSib.greet("Sup mom"));
-}
-
-public class BigSib {
-  public static String greet(String x) {
-    return (x);
+    String greeeting;
+    BigSib richard = new BigSib();
+    richard.setHelloMsg("Word up");
+    
+    greeting = richard.greet("freshman");
+    System.out.println(greeting);
   }
 }
