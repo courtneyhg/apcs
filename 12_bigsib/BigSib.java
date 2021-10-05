@@ -17,7 +17,8 @@ public class Greet {
     System.out.println(BigSib.greet("Sup mom"));
 }
 
-public class BigSib{
+public class BigSib {
   public static String greet(String x) {
     return (x);
   }
+}
