@@ -4,9 +4,10 @@
 // <2021>-<10>-<04>
 
 // DISCOVERIES
-// This is VERY similar to the code from HW_08. We use greet to display the strings.
+// You need to create a BigSib.java because in this code it calls for a BigSib.greet. In BigSib.java, you can return the string mentioned here.
 
 // UNRESOLVED QUESTIONS
+// Why do we need two java files for this? Can't we just use one?
 
 public class Greet {
   public static void main (String [] args) {
