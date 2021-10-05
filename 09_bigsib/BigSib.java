@@ -1,4 +1,4 @@
-// <Flaming> <Hot> <Cheetos> <Duckies Name: Timothy>
+// <Flaming> <Hot> <Cheetos> <Courtney Huang and Timothy, Perry Huang and Salaj Jr., Samantha Hua and Poppy>
 // APCS
 // HW<09> -- <What are BigSibs Good For?>
 // <2021>-<09>-<30>
