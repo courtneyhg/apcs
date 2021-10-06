@@ -13,9 +13,8 @@
   public static String greet(String x) {
     return (x);
    }
-  string HelloMsg;
+  
   public static String setHelloMsg(String y) {
-   HelloMsg = y;
-   System.out.print(HelloMsg + ' ');
+   return (y);
   }
 }
