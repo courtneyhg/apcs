@@ -12,6 +12,7 @@
 public class Greet {
   public static void main (String [] args) {
     String greeeting;
+    
     BigSib richard = new BigSib();
     richard.setHelloMsg("Word up");
     
