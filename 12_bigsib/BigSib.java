@@ -10,7 +10,10 @@
 //
 
  public class BigSib{
-  public static void greet(String x) {
-    return (HelloMsg);
+  public static String greet(String x) {
+    return (x);
    }
+  public static String HelloMsg(String y) {
+   retirn (y);
+  }
 }
