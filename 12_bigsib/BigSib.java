@@ -14,9 +14,6 @@
     return (x);
    }
   public static String setHelloMsg(String y) {
-   return (y);
-  }
-  public static String greeting(String z) {
-   return richard.greet(z);
+   HelloMsg = y;
   }
 }
