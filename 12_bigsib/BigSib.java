@@ -17,6 +17,6 @@
    return (y);
   }
   public static String greeting(String z) {
-   return (z);
+   return richard.greet(z);
   }
 }
