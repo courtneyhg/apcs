@@ -15,5 +15,6 @@
    }
   public static String setHelloMsg(String y) {
    HelloMsg = y;
+   System.out.print(HelloMsg + ' ');
   }
 }
