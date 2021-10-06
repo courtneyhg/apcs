@@ -13,7 +13,7 @@
   public static String greet(String x) {
     return (x);
    }
-  public static String HelloMsg(String y) {
+  public static String setHelloMsg(String y) {
    return (y);
   }
 }
