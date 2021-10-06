@@ -4,10 +4,10 @@
 // <2021>-<10>-<05>
 
 // DISCO
-// 
+// Both are strings
 
 // QCC
-//
+// I keep getting the error message "error: cannot find symbol" "symbol: variable greeting" "location: class Greet"
 
  public class BigSib{
   public static String setHelloMsg(String y) {
