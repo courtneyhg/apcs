@@ -14,6 +14,6 @@
     return (x);
    }
   public static String HelloMsg(String y) {
-   retirn (y);
+   return (y);
   }
 }
