@@ -1,4 +1,4 @@
-// <Flaming> <Hot> <Cheetos> <Courtney Huang and Timothy, Perry Huang and Salaj Jr., Samantha Hua and Poppy>
+// <Courtney Huang and Timothy, Yat Long>
 // APCS
 // HW<12> -- <On Elder Individuality and the Elimination of Radio Fuzz>
 // <2021>-<10>-<05>
@@ -19,19 +19,22 @@ public class Greet {
     greeting = richard.greet("freshman");
     System.out.println(greeting);
     
-    richard.setHelloMsg("Salutations");
+    BigSib spaceman = new BigSib();
+    spaceman.setHelloMsg("Salutations");
 
-    greeting = richard.greet("Dr.Spaceman");
+    greeting = spaceman.greet("Dr.Spaceman");
     System.out.println(greeting);
+    
+    BigSib fooey = new BigSib();
+    fooey.setHelloMsg("Hey ya");
 
-    richard.setHelloMsg("Hey ya");
-
-    greeting = richard.greet("Kong Fooey");
+    greeting = fooey.greet("Kong Fooey");
     System.out.println(greeting);
+    
+    BigSib mom = new BigSib();
+    mom.setHelloMsg("Sup");
 
-    richard.setHelloMsg("Sup");
-
-    greeting = richard.greet("mom");
+    greeting = mom.greet("mom");
     System.out.println(greeting);
   }
 }
