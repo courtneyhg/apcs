@@ -1,4 +1,4 @@
-// <Flaming> <Hot> <Cheetos> <Courtney Huang and Timothy, Perry Huang and Salaj Jr., Samantha Hua and Poppy>
+// <Courtney Huang and Timothy, Yat Long>
 // APCS
 // HW<12> -- <On Elder Individuality and the Elimination of Radio Fuzz>
 // <2021>-<10>-<05>
@@ -10,10 +10,12 @@
 // I keep getting the error message "error: cannot find symbol" "symbol: variable greeting" "location: class Greet"
 
  public class BigSib{
-  public static String setHelloMsg(String y) {
-   return (y);
+  String HelloMsg;
+  
+  public void String setHelloMsg(String y) {
+   HelloMsg = y;
   }
-  public static String greet(String x) {
-   return (x);
+  public String greet(String x) {
+   return (HelloMsg + " " + name);
    }
 }
