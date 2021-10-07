@@ -10,7 +10,7 @@
 // Why do we name it richard and why did we need to create a new BigSib();?
 
 public class Greet {
-  public static void main (String [] args) {
+  public static void main (String[] args) {
     String greeeting;
     
     BigSib richard = new BigSib();
