@@ -16,6 +16,6 @@
    HelloMsg = y;
   }
   public String greet(String x) {
-   return (HelloMsg + " " + name);
+   return (HelloMsg + " " + x);
    }
 }
