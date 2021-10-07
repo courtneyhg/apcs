@@ -4,13 +4,17 @@
 // <2021>-<10>-<06>
 
 // DISCO
-// Both are strings
+// A constructor must be public and it is the 1st method definition
 
 // QCC
 // I keep getting the error message "error: cannot find symbol" "symbol: variable greeting" "location: class Greet"
 
  public class BigSib{
   String HelloMsg;
+  
+  public BigSib(String z){
+   setHelloMsg(z);
+  }
   
   public void setHelloMsg(String y) {
    HelloMsg = y;
