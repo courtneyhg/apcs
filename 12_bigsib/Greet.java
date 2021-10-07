@@ -10,31 +10,31 @@
 // Why do we name it richard and why did we need to create a new BigSib();?
 
 public class Greet {
-  public static void main (String[] args) {
-    String greeeting;
-    
-    BigSib richard = new BigSib();
-    richard.setHelloMsg("Word up");
-    
-    greeting = richard.greet("freshman");
-    System.out.println(greeting);
-    
-    BigSib spaceman = new BigSib();
-    spaceman.setHelloMsg("Salutations");
+	public static void main( String[] args ) {
+    		String greeting;
 
-    greeting = spaceman.greet("Dr.Spaceman");
-    System.out.println(greeting);
-    
-    BigSib fooey = new BigSib();
-    fooey.setHelloMsg("Hey ya");
+    		BigSib freshie = new BigSib();
+    		freshie.setHelloMsg("Word up");
 
-    greeting = fooey.greet("Kong Fooey");
-    System.out.println(greeting);
-    
-    BigSib mom = new BigSib();
-    mom.setHelloMsg("Sup");
+    		greeting = freshie.greet("freshman");
+    		System.out.println(greeting);
+		
+		BigSib spaceman = new BigSib();
+		spaceman.setHelloMsg("Salutations");
 
-    greeting = mom.greet("mom");
-    System.out.println(greeting);
+		greeting = spaceman.greet("Dr. Spaceman");
+		System.out.println(greeting);
+
+		BigSib kong = new BigSib();
+		kong.setHelloMsg("Hey ya");
+
+		greeting = kong.greet("Kong Fooey");
+		System.out.println(greeting);
+
+		BigSib mother = new BigSib();
+		mother.setHelloMsg("Sup");
+
+		greeting = mother.greet("mom");
+		System.out.println(greeting);
   }
-}
+} 
