@@ -12,7 +12,7 @@
  public class BigSib{
   String HelloMsg;
   
-  public void String (setHelloMsg(String y) {
+  public void setHelloMsg(String y) {
    HelloMsg = y;
   }
   public String greet(String x) {
