@@ -10,13 +10,12 @@
 // I keep getting the error message "error: cannot find symbol" "symbol: variable greeting" "location: class Greet"
 
  public class BigSib{
-	String HelloMsg;
- 
-	public void setHelloMsg(String msg){
-		 HelloMsg = msg;
-	}
-	public String greet(String name){
-		return (HelloMsg + " " +  name);
-	}
-
+  String HelloMsg;
+  
+  public void setHelloMsg(String y) {
+   HelloMsg = y;
+  }
+  public String greet(String x) {
+   return (HelloMsg + " " + x);
+   }
 }
