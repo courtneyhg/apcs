@@ -12,7 +12,7 @@
  public class BigSib{
   String HelloMsg;
   public BigSib () {
-   z = ("Word up");
+   System.out.println("Word up");
   }
   
   public void setHelloMsg(String y) {
