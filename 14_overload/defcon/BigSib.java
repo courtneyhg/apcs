@@ -10,7 +10,7 @@
 // I keep getting the error message "error: cannot find symbol" "symbol: variable greeting" "location: class Greet"
 
  public class BigSib{
-  String HelloMsg;
+  String hi;
   public BigSib () {
    hi = ("hellooo");
   }
