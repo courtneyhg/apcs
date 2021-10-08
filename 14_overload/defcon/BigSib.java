@@ -16,6 +16,6 @@
   }
   
   public String greet(String x) {
-   return (hi + " " + x);
+   return hi + " " + x;
    }
 }
