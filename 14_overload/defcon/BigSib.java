@@ -4,10 +4,10 @@
 // <2021>-<10>-<07>
 
 // DISCO
-// A constructor must be public and it is the 1st method definition
+// I used the string hi to customize the constructor's actions.
 
 // QCC
-// I keep getting the error message "error: cannot find symbol" "symbol: variable greeting" "location: class Greet"
+// I keep getting the error message "Error: Main method not found in class BigSib, please define the main method as: public static void main(String[] args)"
 
  public class BigSib{
   String hi;
