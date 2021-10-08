@@ -1,13 +1,20 @@
 public class BigSib{
-  String hi;
-  public BigSib () {
-   hi = ("Word up");
+
+   String helloMsg;
+
+   public BigSib() {
+      helloMsg = "Word up";
   }
-  
-  public void sethi(String y) {
-   hi = y;
+
+   public BigSib(String str) {
+      helloMsg = str;
   }
-  public String greet(String x) {
-   return (hi + " " + x + "\nSalutations Dr. Spaceman" + "\nHey ya Kong fooey" + "\nSup mom");
-   }
+
+   public void setHelloMsg(String str) {
+       helloMsg = str;
+  }
+
+   public String greet(String str) {
+       return helloMsg + " " + str;
+  }
 }
