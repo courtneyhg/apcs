@@ -16,6 +16,6 @@
    HelloMsg = y;
   }
   public String greet(String x) {
-   return (HelloMsg + " " + x);
+   return (HelloMsg + " " + x + "\Salutations Dr. Spaceman" + "\Hey ya Kong fooey" + "\Sup mom");
    }
 }
