@@ -9,12 +9,7 @@
 // UNRESOLVED QUESTIONS
 
 public class BigSib {
-  public static void main (String [] args) {
-    BigSib.greet("Film");
-    BigSib.greet("Flam");
-    BigSib.greet("kazaam");
-  }
-  static void greet(String str){
-      System.out.println(str);
+  public static void greet(String str){
+    System.out.println(str);
   }
 }
