@@ -56,6 +56,6 @@ an object)
 Questions: How come instance variables can be private but methods cannot be (at least when you want it to 
 interact with another [java] file)?
 Is there any way to create an account number randomly but to make sure that none repeat (in java)?
+Q2:
 Q3:
-Q4:
 */
