@@ -21,8 +21,13 @@ public class BankAccount {
 		Password = pwd;
 		PIN = pin;
 		Balance = initAmount;
-		AccountNumber = accNumber;
-	}
+		if (aacNumber >= 100000000 && accNumber <=999999998) {
+			AccountNumber = accNumber;
+		}
+		else{
+			AccountNumber = 999999999;
+			System.out.println("invalid account number");
+		}
 
 	public void ShowInfo(String name, String pwd) {
 		System.out.println("FullName: " + FullName);
