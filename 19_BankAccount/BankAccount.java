@@ -97,5 +97,7 @@ public class BankAccount {
 
 
 /*
-Discoveries: 
+Discoveries: We must use && for "and" if we want both statements to be true in the if statement.
+
+Questions: Why does it not show that Bob Dylan has an invalid pin and invalid account number when I do bobAccount.ShowInfo again after withdrawing money?
 */
