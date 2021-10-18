@@ -61,6 +61,15 @@ public class BankAccount {
 		}
 	}
 	
+	public boolean authenticate(int accNumber, String pwd){
+		if (accNumber >= 100000000 && accNumber <=999999998){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
 	public static void main (String[] args) {
 		System.out.println("It works!!");
 		BankAccount joshAccount = new BankAccount("Josh Davis","password",1234,1000,123456789);
