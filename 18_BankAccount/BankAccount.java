@@ -21,7 +21,7 @@ public class BankAccount {
 		Password = pwd;
 		PIN = pin;
 		Balance = initAmount;
-		if (aacNumber >= 100000000 && accNumber <=999999998) {
+		if (accNumber >= 100000000 && accNumber <=999999998) {
 			AccountNumber = accNumber;
 		}
 		else{
