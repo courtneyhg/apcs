@@ -44,7 +44,7 @@ public class BankAccount {
 	
 	public static void main (String[] args) {
 		System.out.println("It works!!");
-		BankAccount joshAccount = new BankAccount("Josh Davis","password",1234,1000);
+		BankAccount joshAccount = new BankAccount("Josh Davis","password",1234,1000,123456789);
 
 		joshAccount.Deposit(1234,4000.50);
 		joshAccount.ShowInfo("Josh Davis","password");
@@ -52,7 +52,7 @@ public class BankAccount {
 		joshAccount.ShowInfo("Josh Davis","password");
 
 		//Bob's account and credentials
-		BankAccount bobAccount = new BankAccount("Bob Dylan","123",5678,20000.75);
+		BankAccount bobAccount = new BankAccount("Bob Dylan","123",5678,20000.75,-10);
 
 		bobAccount.Deposit(5678,99.25);
 		bobAccount.ShowInfo("Bob Dylan","123");
