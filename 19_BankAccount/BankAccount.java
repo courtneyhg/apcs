@@ -1,8 +1,8 @@
 /*
-TNPG: Vegan Dragons (Andrew Piatesky, Anjini Katari, Courtney Huang) and Burnt Peanut
+TNPG: Vegan Dragons (Andrew Piatesky, Anjini Katari, Courtney Huang)
 APCS
 HW 19 -- Mo Money Mo Problems ...MORE AWESOME 
-2021-10-16
+2021-10-18
 */
 
 public class BankAccount {
