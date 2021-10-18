@@ -76,19 +76,21 @@ public class BankAccount {
 	
 	public static void main (String[] args) {
 		System.out.println("It works!!");
+		//Josh's account and credentials
 		BankAccount joshAccount = new BankAccount("Josh Davis","password",1234,1000,123456789);
 
-		//joshAccount.Deposit(1234,4000.50);
-		//joshAccount.ShowInfo("Josh Davis","password");
+		joshAccount.Deposit(1234,400);
+		joshAccount.ShowInfo("Josh Davis","password");
 		joshAccount.Withdraw(1234,800);
 		joshAccount.ShowInfo("Josh Davis","password");
 
 		//Bob's account and credentials
-		BankAccount bobAccount = new BankAccount("Bob Dylan","123",0001,20000.75,-10);
+		BankAccount bobAccount = new BankAccount("Bob Dylan","123",0001,200,-10);
 
 		bobAccount.Deposit(5678,99.25);
 		bobAccount.ShowInfo("Bob Dylan","123");
-		bobAccount.Withdraw(0001,25000.50);
+		bobAccount.Withdraw(0001,250);
+		bobaccount.ShowInfo("Bob Dylan, "123");
 
 	}
 }
