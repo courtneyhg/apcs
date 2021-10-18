@@ -20,6 +20,13 @@ public class BankAccount {
 		FullName = name;
 		Password = pwd;
 		PIN = pin;
+		if (pin >= 1000 && pin <= 9998){
+			pin = PIN;
+		}
+		else{
+			PIN = 9999;
+			System.out.println("invalid pin");
+		}
 		Balance = initAmount;
 		if (accNumber >= 100000000 && accNumber <=999999998) {
 			AccountNumber = accNumber;
