@@ -52,13 +52,11 @@ public class BankAccount {
 
 	public boolean Withdraw(int pin, double amount){
 		if (amount > Balance){
-			return Balance;
 			System.out.println("You have don't have enough money");
 			return false;
 		}
 		else{
 			Balance -= amount;
-			return Balance;
 			return true;
 		}
 	}
