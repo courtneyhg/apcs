@@ -65,7 +65,7 @@ public class BankAccount {
 		joshAccount.ShowInfo("Josh Davis","password");
 
 		//Bob's account and credentials
-		BankAccount bobAccount = new BankAccount("Bob Dylan","123",5678,20000.75,-10);
+		BankAccount bobAccount = new BankAccount("Bob Dylan","123",0001,20000.75,-10);
 
 		bobAccount.Deposit(5678,99.25);
 		bobAccount.ShowInfo("Bob Dylan","123");
