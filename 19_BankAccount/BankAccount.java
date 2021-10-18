@@ -90,7 +90,7 @@ public class BankAccount {
 		bobAccount.Deposit(5678,99.25);
 		bobAccount.ShowInfo("Bob Dylan","123");
 		bobAccount.Withdraw(0001,250);
-		bobaccount.ShowInfo("Bob Dylan, "123");
+		bobaccount.ShowInfo("Bob Dylan", "123");
 
 	}
 }
