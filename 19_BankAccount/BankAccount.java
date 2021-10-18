@@ -45,6 +45,7 @@ public class BankAccount {
 		System.out.println("PIN: " + PIN);
 		System.out.println("Acc number: " + AccountNumber);
 		System.out.println("Balance: " + Balance);
+		return ("\n");
 	}
 
 	public double Deposit(int pin, double amount){
