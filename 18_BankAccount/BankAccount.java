@@ -28,6 +28,7 @@ public class BankAccount {
 			AccountNumber = 999999999;
 			System.out.println("invalid account number");
 		}
+	}
 
 	public void ShowInfo(String name, String pwd) {
 		System.out.println("FullName: " + FullName);
