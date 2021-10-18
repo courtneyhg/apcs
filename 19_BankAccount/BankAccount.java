@@ -25,7 +25,7 @@ public class BankAccount {
 		}
 		else{
 			PIN = 9999;
-			System.out.println("invalid pin");
+			System.out.println("Invalid pin");
 		}
 		
 		// The account number should only be set to a 9 digit number (interval [100000000, 999999998])
@@ -35,7 +35,7 @@ public class BankAccount {
 		}
 		else{
 			AccountNumber = 999999999;
-			System.out.println("invalid account number");
+			System.out.println("Invalid account number");
 		}
 	}
 
@@ -56,7 +56,7 @@ public class BankAccount {
 	// If the account does have enough money, then the amount is deducted and true is returned.
 	public boolean Withdraw(int pin, double amount){
 		if (amount > Balance){
-			System.out.println("You have don't have enough money");
+			System.out.println("You do not have enough money");
 			return false;
 		}
 		else{
