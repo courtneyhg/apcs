@@ -16,12 +16,12 @@ public class BankAccount {
 	private double Balance;
 	
 	//Overloaded constructor, no default one because need to make account by default.
-	public BankAccount(String name, String pwd, int pin, double initAmount) {
+	public BankAccount(String name, String pwd, int pin, double initAmount, int accNumber) {
 		FullName = name;
 		Password = pwd;
 		PIN = pin;
 		Balance = initAmount;
-		AccountNumber = 123456789;
+		AccountNumber = accNumber;
 	}
 
 	public void ShowInfo(String name, String pwd) {
