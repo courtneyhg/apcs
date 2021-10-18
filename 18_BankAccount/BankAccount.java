@@ -68,7 +68,7 @@ public class BankAccount {
 		//joshAccount.Deposit(1234,4000.50);
 		joshAccount.ShowInfo("Josh Davis","password");
 		joshAccount.Withdraw(1234,800);
-		joshAccount.ShowInfo("Josh Davis","password");
+		//joshAccount.ShowInfo("Josh Davis","password");
 
 		//Bob's account and credentials
 		BankAccount bobAccount = new BankAccount("Bob Dylan","123",0001,20000.75,-10);
