@@ -5,8 +5,6 @@ HW 18 -- CPA-One/using UML Diagrams of classes to write classes/ We used our UML
 2021-10-16
 */
 
-
-
 public class BankAccount {
 	
 	private String FullName;
