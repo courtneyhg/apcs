@@ -65,9 +65,9 @@ public class BankAccount {
 		System.out.println("It works!!");
 		BankAccount joshAccount = new BankAccount("Josh Davis","password",1234,1000,123456789);
 
-		joshAccount.Deposit(1234,4000.50);
+		//joshAccount.Deposit(1234,4000.50);
 		joshAccount.ShowInfo("Josh Davis","password");
-		joshAccount.Withdraw(1234,2500.50);
+		joshAccount.Withdraw(1234,800);
 		joshAccount.ShowInfo("Josh Davis","password");
 
 		//Bob's account and credentials
