@@ -17,6 +17,8 @@ public class BankAccount {
 	public BankAccount(String name, String pwd, int pin, double initAmount, int accNumber) {
 		FullName = name;
 		Password = pwd;
+		
+		// PIN should only be set to a 4 digit number (some value betweem 1000 and 9998)
 		PIN = pin;
 		if (pin >= 1000 && pin <= 9998){
 			pin = PIN;
@@ -25,6 +27,8 @@ public class BankAccount {
 			PIN = 9999;
 			System.out.println("invalid pin");
 		}
+		
+		// The account number should only be set to a 9 digit number (interval [100000000, 999999998])
 		Balance = initAmount;
 		if (accNumber >= 100000000 && accNumber <=999999998) {
 			AccountNumber = accNumber;
@@ -47,7 +51,9 @@ public class BankAccount {
 		Balance += amount;
 		return Balance;
 	}
-
+ 	 
+	// If the account does not ahve enough money, nothing is changed. An error message is printed and false is returned.
+	// If the account does have enough money, then the amount is deducted and true is returned.
 	public boolean Withdraw(int pin, double amount){
 		if (amount > Balance){
 			System.out.println("You have don't have enough money");
