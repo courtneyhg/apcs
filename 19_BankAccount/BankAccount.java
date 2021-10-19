@@ -112,7 +112,7 @@ public class BankAccount {
 
     //testing withdraw
     ba.setBalance(1000);
-    double gooddraw = 1000;
+    double gooddraw = 100;
     double baddraw = -1;
     ba.withdraw(gooddraw);
 
