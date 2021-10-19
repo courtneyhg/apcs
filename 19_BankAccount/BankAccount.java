@@ -100,7 +100,6 @@ public class BankAccount {
     // INSERT YOUR METHOD CALLS FOR TESTING HERE
     BankAccount ba = new BankAccount();
     
-    string name = Bob;
     //testing setting pin and account num with different values
     int goodnum = 100000000;//123456789;
     int bignum = 1234567891;
@@ -118,6 +117,7 @@ public class BankAccount {
     ba.withdraw(gooddraw);
 
     //testing authenticate
+    ba.setName("Bob");
     ba.setPasswd("bugs4");
     ba.setAcctNum(goodnum);
     System.out.println(ba.authenticate(goodnum,"bugs4"));
