@@ -99,7 +99,8 @@ public class BankAccount {
   public static void main( String[] args ) {
     // INSERT YOUR METHOD CALLS FOR TESTING HERE
     BankAccount ba = new BankAccount();
-
+    
+    string name = Bob;
     //testing setting pin and account num with different values
     int goodnum = 100000000;//123456789;
     int bignum = 1234567891;
@@ -138,10 +139,4 @@ Discoveries:
 You can use the main method to interact with objects (create/modify). 
 Java uses '&' and '|' instead of 'and' and 'or' (I knew this b/c of the summer hw but I completely forgot)
 Questions: Is there a built in exponent/power function into java?
-Q2:How do you know BEFORE you wrote your own constructor, that Java provides one for you?
-We know because it initialized the instance varible message in class BigSib. The primary purpose of a constructor is to initialize instance variables 
-so when we created object of class BigSib without writing a constructor and the instance variable was initialized it meant that java did it for us automatically.
-Q3:Describe a test to determine whether Java provides a mean of outputting a STRING REPRESENTATION of an OBJECT.?
-Java does not provide one because when you try to print (System.out.println) the name of an object is shows some gibberish which I do not understand.
-So to print/output all of the properties of an object you have to write your own method for that class, and then use the object of that class to run the method. 
 */
