@@ -1,100 +1,10 @@
 /*
-TNPG: Vegan Dragons (Andrew Piatesky, Anjini Katari, Courtney Huang)
+TNPG: Vegan Dragons (Andrew Piatesky, Anjini Katari, Courtney Huang) and Burnt Peanut
 APCS
-HW 19 -- Mo Money Mo Problems ...MORE AWESOME 
+HW 19 -- Mo Money Mo Problems ...MORE AWESOME/Revising and augmenting class BankAccount/ Added new features to BankAccount such as testing to see if a PIN is valid. 
 2021-10-18
-
-
-public class BankAccount {
-	
-	private String FullName;
-	private String Password;
-	private int PIN;
-	private int AccountNumber;
-	private double Balance;
-	
-	//Overloaded constructor, no default one because need to make account by default.
-	public BankAccount(String name, String pwd, int pin, double initAmount, int accNumber) {
-		FullName = name;
-		Password = pwd;
-		
-		// PIN should only be set to a 4 digit number (some value betweem 1000 and 9998)
-		PIN = pin;
-		if (pin >= 1000 && pin <= 9998){
-			pin = PIN;
-		}
-		else{
-			PIN = 9999;
-			System.out.println("Invalid pin");
-		}
-		
-		// The account number should only be set to a 9 digit number (interval [100000000, 999999998])
-		Balance = initAmount;
-		if (accNumber >= 100000000 && accNumber <=999999998) {
-			AccountNumber = accNumber;
-		}
-		else{
-			AccountNumber = 999999999;
-			System.out.println("Invalid account number");
-		}
-	}
-
-	public void ShowInfo(String name, String pwd) {
-		System.out.println("FullName: " + FullName);
-		System.out.println("Password: " + Password);
-		System.out.println("PIN: " + PIN);
-		System.out.println("Acc number: " + AccountNumber);
-		System.out.println("Balance: " + Balance + "\n");
-	}
-
-	public double Deposit(int pin, double amount){
-		Balance += amount;
-		return Balance;
-	}
- 	 
-	// If the account does not ahve enough money, nothing is changed. An error message is printed and false is returned.
-	// If the account does have enough money, then the amount is deducted and true is returned.
-	public boolean Withdraw(int pin, double amount){
-		if (amount > Balance){
-			System.out.println("You do not have enough money");
-			return false;
-		}
-		else{
-			Balance -= amount;
-			return true;
-		}
-	}
-	
-	public boolean authenticate(int accNumber, String pwd){
-		if (accNumber >= 100000000 && accNumber <=999999998){
-			return true;
-		}
-		else{
-			return false;
-		}
-	}
-	
-	public static void main (String[] args) {
-		System.out.println("It works!!");
-		//Josh's account and credentials
-		BankAccount joshAccount = new BankAccount("Josh Davis","password", 1234, 1000, 123456789);
-
-		joshAccount.Deposit(1234, 400.52);
-		joshAccount.ShowInfo("Josh Davis","password");
-		joshAccount.Withdraw(1234, 800.87);
-		joshAccount.ShowInfo("Josh Davis","password");
-
-		//Bob's account and credentials
-		BankAccount bobAccount = new BankAccount("Bob Dylan", "123", 0001, 200, -10);
-
-		bobAccount.Deposit(5678, 99.25);
-		bobAccount.ShowInfo("Bob Dylan", "123");
-		bobAccount.Withdraw(0001, 590.99);
-		bobAccount.ShowInfo("Bob Dylan", "123");
-
-	}
-}
 */
+
 public class BankAccount {
 
   //instance variables
@@ -121,26 +31,26 @@ public class BankAccount {
 
   public short setPin( short newPin ) {
     short oldPin = pin;
-    if (newPin >= 1000 && newPin <= 9998){
-	    newPin = pin;
-    } else{
-	    pin = 9999;
-	    System.out.println("Invalid pin");
+    if (((newPin - 1000) >= 0) & ((newPin - 1000) < 9000)) {
+      pin = newPin;
+    } else {
+      System.out.println("Not a 4 digit number, setting PIN to 9999");
+      pin = 9999;
     }
     return oldPin;
   }
 
   public int setAcctNum( int newAcctNum ) {
-     int oldAcctNum = acctNum;
-     if (newAcctNum >= 100000000 && newAcctNum <=999999998) {
-	     acctNum = newAcctNum;
-     } else{
-	     acctNum = 999999999;
-	     System.out.println("Invalid account number");
-     }
+    int oldAcctNum = acctNum;
+    int check = newAcctNum - 100000000; 
+    if (((check) >= 0) & ((check) < 900000000)) {
+      acctNum = newAcctNum;
+    } else {
+      System.out.println("Not a nine digit number, setting Account Number to 999999999");
+      acctNum = 999999999;
+    }
+    return oldAcctNum;
   }
-	return oldAcctNum;
-}
 
   public double setBalance( double newBalance ) {
     double oldBalance = balance;
@@ -154,24 +64,27 @@ public class BankAccount {
     balance = balance + depositAmount;
   }
 
-  public void withdraw( double withdrawAmount ) {
-	  if (withdrawAmount > balance){
-		  System.out.println("You do not have enough money");
-		  return false;
-	  } else{
-		  Balance -= amount;
-		  return true;
-	  }
+  public boolean withdraw( double withdrawAmount ) {
+    if (withdrawAmount > balance) {
+      System.out.println("Not enough money in the account");
+      return false;
+    } else if (withdrawAmount < 0) {
+      System.out.println("Cannot withdraw a negative amount");
+      return false;
+    } else {
+      balance = balance - withdrawAmount;
+      return true;
+    }
   }
 
-public boolean authenticate(int newAcctNum, String newPasswd){
-	if (newAcctNum >= 100000000 && newAcctNum <=999999998){
-		return true;
-	}
-	else{
-		return false;
-	}
-}
+  public boolean authenticate( int inptAcctNum, String pwd ) {
+    if ((inptAcctNum == acctNum) & (pwd == passwd)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
   //overwritten toString()
   public String toString() {
@@ -185,18 +98,54 @@ public boolean authenticate(int newAcctNum, String newPasswd){
     return retStr;
   }
 
+
   //main method for testing
   public static void main( String[] args ) {
     // INSERT YOUR METHOD CALLS FOR TESTING HERE
-	  BankAccount ba = new BankAccount();
-	  ba.toString();
-	  
+    BankAccount ba = new BankAccount();
+
+    //testing setting pin and account num with different values
+    int goodnum = 100000000;//123456789;
+    int bignum = 1234567891;
+    int small = 1234;
+    ba.setAcctNum(goodnum);
+    short goodnum2 = 1000;
+    short bignum2 = 12345;
+    short smallnum2 = 123;
+    ba.setPin(smallnum2);
+
+    //testing withdraw
+    ba.setBalance(1000);
+    double gooddraw = 1000;
+    double baddraw = -1;
+    ba.withdraw(gooddraw);
+
+    //testing authenticate
+    ba.setPasswd("bugs4");
+    ba.setAcctNum(goodnum);
+    System.out.println(ba.authenticate(goodnum,"bugs4"));
+    System.out.println(ba.authenticate(bignum,"bugs4"));
+    System.out.println(ba.authenticate(goodnum,"wrong"));
+    System.out.println(ba.authenticate(1930,"wrong"));
+
+    //printing all of the instance variables out after tests
+    System.out.println(ba.toString());
+
+
   }//end main()
 
 }//end class BankAccount
 
-/*
-Discoveries: We must use && for "and" if we want both statements to be true in the if statement.
 
-Questions: Why does it not show that Bob Dylan has an invalid pin and invalid account number when I do bobAccount.ShowInfo again after withdrawing money?
+/*
+Discoveries: 
+You can use the main method to interact with objects (create/modify). 
+Java uses '&' and '|' instead of 'and' and 'or' (I knew this b/c of the summer hw but I completely forgot)
+Questions: Is there a built in exponent/power function into java?
+Q2:How do you know BEFORE you wrote your own constructor, that Java provides one for you?
+We know because it initialized the instance varible message in class BigSib. The primary purpose of a constructor is to initialize instance variables 
+so when we created object of class BigSib without writing a constructor and the instance variable was initialized it meant that java did it for us automatically.
+Q3:Describe a test to determine whether Java provides a mean of outputting a STRING REPRESENTATION of an OBJECT.?
+Java does not provide one because when you try to print (System.out.println) the name of an object is shows some gibberish which I do not understand.
+So to print/output all of the properties of an object you have to write your own method for that class, and then use the object of that class to run the method. 
 */
