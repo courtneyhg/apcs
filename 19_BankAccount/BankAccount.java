@@ -104,7 +104,7 @@ public class BankAccount {
     int goodnum = 100000000;//123456789;
     int bignum = 1234567891;
     int small = 1234;
-    ba.setAcctNum(goodnum);
+    //ba.setAcctNum(goodnum);
     short goodnum2 = 1000;
     short bignum2 = 12345;
     short smallnum2 = 123;
