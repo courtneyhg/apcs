@@ -121,29 +121,25 @@ public class BankAccount {
 
   public short setPin( short newPin ) {
     short oldPin = pin;
-    pin = newPin;
+    if (newPin >= 1000 && newPin <= 9998){
+	    newPin = pin;
+    } else{
+	    pin = 9999;
+	    System.out.println("Invalid pin");
+    }
     return oldPin;
-	  if (newPin >= 1000 && newPin <= 9998){
-			newPin = pin;
-		}
-		else{
-			pin = 9999;
-			System.out.println("Invalid pin");
-		}
   }
 
   public int setAcctNum( int newAcctNum ) {
-	  int oldAcctNum = acctNum;
-	  acctNum = newAcctNum;
-	  return oldAcctNum;
-	  if (newAcctNum >= 100000000 && newAcctNum <=999999998) {
-		  acctNum = newAcctNum;
-	  }
-	  else{
-		  acctNum = 999999999;
-		  System.out.println("Invalid account number");
-	  }
+     int oldAcctNum = acctNum;
+     if (newAcctNum >= 100000000 && newAcctNum <=999999998) {
+	     acctNum = newAcctNum;
+     } else{
+	     acctNum = 999999999;
+	     System.out.println("Invalid account number");
+     }
   }
+	return oldAcctNum;
 }
 
   public double setBalance( double newBalance ) {
@@ -159,15 +155,15 @@ public class BankAccount {
   }
 
   public void withdraw( double withdrawAmount ) {
-	  if (amount > Balance){
+	  if (withdrawAmount > balance){
 		  System.out.println("You do not have enough money");
 		  return false;
-	  }
-	  else{
+	  } else{
 		  Balance -= amount;
 		  return true;
 	  }
   }
+
 public boolean authenticate(int newAcctNum, String newPasswd){
 	if (newAcctNum >= 100000000 && newAcctNum <=999999998){
 		return true;
