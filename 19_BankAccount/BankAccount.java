@@ -31,7 +31,7 @@ public class BankAccount {
 
   public short setPin( short newPin ) {
     short oldPin = pin;
-    if (((newPin - 1000) >= 0) & ((newPin - 1000) < 9000)) {
+    if (newPin >= 1000 && newPin <= 9998) {
       pin = newPin;
     } else {
       System.out.println("Not a 4 digit number, setting PIN to 9999");
@@ -42,8 +42,7 @@ public class BankAccount {
 
   public int setAcctNum( int newAcctNum ) {
     int oldAcctNum = acctNum;
-    int check = newAcctNum - 100000000; 
-    if (((check) >= 0) & ((check) < 900000000)) {
+    if (newAcctNum >= 100000000 && newAcctNum <= 999999998) {
       acctNum = newAcctNum;
     } else {
       System.out.println("Not a nine digit number, setting Account Number to 999999999");
@@ -67,9 +66,6 @@ public class BankAccount {
   public boolean withdraw( double withdrawAmount ) {
     if (withdrawAmount > balance) {
       System.out.println("Not enough money in the account");
-      return false;
-    } else if (withdrawAmount < 0) {
-      System.out.println("Cannot withdraw a negative amount");
       return false;
     } else {
       balance = balance - withdrawAmount;
