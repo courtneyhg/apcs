@@ -3,7 +3,7 @@ TNPG: Vegan Dragons (Andrew Piatesky, Anjini Katari, Courtney Huang)
 APCS
 HW 19 -- Mo Money Mo Problems ...MORE AWESOME 
 2021-10-18
-*/
+
 
 public class BankAccount {
 	
@@ -94,7 +94,110 @@ public class BankAccount {
 
 	}
 }
+*/
+public class BankAccount {
 
+  //instance variables
+  private String name;
+  private String passwd;
+  private short pin;
+  private int acctNum;
+  private double balance;
+  //---------------------------------------------
+
+
+  //mutators
+  public String setName( String newName ) {
+    String oldName = name;
+    name = newName;
+    return oldName;
+  }
+
+  public String setPasswd( String newPasswd ) {
+    String oldPasswd = passwd;
+    passwd = newPasswd;
+    return oldPasswd;
+  }
+
+  public short setPin( short newPin ) {
+    short oldPin = pin;
+    pin = newPin;
+    return oldPin;
+	  if (newPin >= 1000 && newPin <= 9998){
+			newPin = pin;
+		}
+		else{
+			pin = 9999;
+			System.out.println("Invalid pin");
+		}
+  }
+
+  public int setAcctNum( int newAcctNum ) {
+	  int oldAcctNum = acctNum;
+	  acctNum = newAcctNum;
+	  return oldAcctNum;
+	  if (newAcctNum >= 100000000 && newAcctNum <=999999998) {
+		  acctNum = newAcctNum;
+	  }
+	  else{
+		  acctNum = 999999999;
+		  System.out.println("Invalid account number");
+	  }
+  }
+}
+
+  public double setBalance( double newBalance ) {
+    double oldBalance = balance;
+    balance = newBalance;
+    return oldBalance;
+  }
+  //---------------------------------------------
+
+
+  public void deposit( double depositAmount ) {
+    balance = balance + depositAmount;
+  }
+
+  public void withdraw( double withdrawAmount ) {
+	  if (amount > Balance){
+		  System.out.println("You do not have enough money");
+		  return false;
+	  }
+	  else{
+		  Balance -= amount;
+		  return true;
+	  }
+  }
+public boolean authenticate(int newAcctNum, String newPasswd){
+	if (newAcctNum >= 100000000 && newAcctNum <=999999998){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+  //overwritten toString()
+  public String toString() {
+    String retStr = "\nAccount info:\n=======================";
+    retStr = retStr + "\nName: " + name;
+    retStr = retStr + "\nPassword: " + passwd;
+    retStr = retStr + "\nPIN: " + pin;
+    retStr = retStr + "\nAccount Number: " + acctNum;
+    retStr = retStr + "\nBalance: " + balance;
+    retStr = retStr + "\n=======================";
+    return retStr;
+  }
+
+  //main method for testing
+  public static void main( String[] args ) {
+    // INSERT YOUR METHOD CALLS FOR TESTING HERE
+	  BankAccount ba = new BankAccount();
+	  ba.toString();
+	  
+  }//end main()
+
+}//end class BankAccount
 
 /*
 Discoveries: We must use && for "and" if we want both statements to be true in the if statement.
