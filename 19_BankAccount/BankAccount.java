@@ -104,7 +104,6 @@ public class BankAccount {
     int goodnum = 100000000;//123456789;
     int bignum = 1234567891;
     int small = 1234;
-    //ba.setAcctNum(goodnum);
     short goodnum2 = 1000;
     short bignum2 = 12345;
     short smallnum2 = 123;
@@ -120,10 +119,10 @@ public class BankAccount {
     ba.setName("Bob");
     ba.setPasswd("bugs4");
     ba.setAcctNum(goodnum);
-    System.out.println(ba.authenticate(goodnum,"bugs4"));
-    System.out.println(ba.authenticate(bignum,"bugs4"));
-    System.out.println(ba.authenticate(goodnum,"wrong"));
-    System.out.println(ba.authenticate(1930,"wrong"));
+    //System.out.println(ba.authenticate(goodnum,"bugs4"));
+    //System.out.println(ba.authenticate(bignum,"bugs4"));
+    //System.out.println(ba.authenticate(goodnum,"wrong"));
+    //System.out.println(ba.authenticate(1930,"wrong"));
 
     //printing all of the instance variables out after tests
     System.out.println(ba.toString());
