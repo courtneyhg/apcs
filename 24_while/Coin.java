@@ -1,4 +1,3 @@
-/*
 Mochi Yoshi - Yuki Feng, Courtney Huang
 APCS
 HW 23: What Does Equality Look Like?
@@ -12,10 +11,11 @@ public class Coin {
   private String upFace;
   private String denomination;
   private int flipCtr, headsCtr, tailsCtr;
-  private double bias;
+  private double bias = .5;
 
   // default contructor
   public Coin() {
+  reset( "heads", 0.5 );
   }
 
   /***
@@ -30,8 +30,11 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s ) {
-    this.denomination = s;
-    //name = s;
+  this();
+ 
+    //this.denomination = s;
+    name = s;
+    assignValue(s);
   }
 
 
@@ -53,21 +56,25 @@ public class Coin {
     upFace = newFace;
     return face;
   }
+
   public int getFlipCtr(int flip) {
     int flipNum = flipCtr;
     flipCtr = flip;
     return flipNum;
   }
+
   public double getValue(int val) {
     int amount = value;
     value = val;
     return amount;
   }
+
   public int getHeadsCtr(int head) {
     int headNum = headsCtr;
     headsCtr = head;
     return headNum;
   }
+
   public int getTailsCtr(int tail) {
     int tailNum = tailsCtr;
     tailsCtr = tail;
@@ -84,25 +91,25 @@ public class Coin {
    ***/
 
   public double assignValue( String s ) {
-    if(s == "penny"){
-		    value = 0.01;
-		}
-		else if(s == "nickel"){
-		    value = 0.25;
-		}
-		else if(s == "dime"){
-		    value = 0.10;
-		}
-		else if(s == "quarter"){
-		    value = 0.25;
-		}
-		else if(s == "half dollar"){
-		    value = 0.50;
-		}
-		else if (s == "dollar"){
-		    value = 1.00;
-		}
-		return value;
+    if(s.equals ("penny")){
+   value = 0.01;
+}
+else if(s.equals ("nickel")){
+   value = 0.25;
+}
+else if(s.equals ("dime")){
+   value = 0.10;
+}
+else if(s.equals ("quarter")){
+   value = 0.25;
+}
+else if(s.equals ("half dollar")){
+   value = 0.50;
+}
+else if (s.equals ("dollar")){
+   value = 1.00;
+}
+return value;
   }
 
   /***
@@ -111,7 +118,12 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-    upFace = nowFace;
+    //upFace = nowFace;
+    flipCtr = 0;
+    tailsCtr  = 0;
+    headsCtr = 0;
+    upFace = s;
+    bias = d;
   }
 
   /***
@@ -123,9 +135,9 @@ public class Coin {
    * Either headsCtr or tailsCtr incremented by 1, as approp.
    * Returns "heads" or "tails"
    ***/
-  /*
+ 
   public String flip() {
-    Double[] values = {0.01, 0.05, 0.10, 0.25, 0.50, 1.00};
+    /*Double[] values = {0.01, 0.05, 0.10, 0.25, 0.50, 1.00};
     int i = 0;
     flipCtr = 0;
     if (value >= 0.0 && value <= 1.0) {
@@ -134,9 +146,20 @@ public class Coin {
     for (i=0; i<values.length(); i ++) {
       System.out.println(value);
       flipCtr += 1;
+    }*/
+    double randDbl = Math.random();
+    if (randDbl < bias) {
+    upFace = "heads";
+    headsCtr += 1;
     }
+    else {
+    upFace = "tails";
+    tailsCtr += 1;
+    }
+    flipCtr += 1;
+    return upFace;
   }
-*/
+
   /***
    * boolean equals(Coin) -- checks to see if 2 coins have same face up
    * precond: other is not null
@@ -144,12 +167,12 @@ public class Coin {
    * or both showing tails. False otherwise.
    ***/
   public boolean equals( Coin other ) {
-    // return (other == denomination);
+    // return (upFace.equals(other.upFace);
     if (upFace == other.upFace){
-			return true;
-		} else {
-			return false;
-		}
+return true;
+} else {
+return false;
+}
   }
 
   /***
@@ -162,6 +185,7 @@ public class Coin {
     reStr += "\nCurrent denomination: " + denomination;
     reStr += "\nCurrent face: " + upFace;
     return reStr;
+    // return "" + name + " -- " + upFace;
   }
 
   public static void main(String[] args){
