@@ -46,9 +46,9 @@ public class Driver {
       System.out.println("wayne: " + wayne);
 
       //test flip() method
-      System.out.println("\nAfter flipping...");
-      // yours.flip();
-      // wayne.flip();
+      System.out.println("After flipping...");
+      yours.flip();
+      wayne.flip();
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
 
@@ -59,6 +59,18 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
+      
+      //hw24
+      Coin bob = new Coin();
+      int x = 0;
+      int y = 0;
+      while (x < 10) {
+	   bob.flip();
+	   if (bob.getUpFace().equals("heads")){
+	   x += 1;
+	   }
+	   }
+
 
       // ====================BOTTOM======================*/
 
