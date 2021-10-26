@@ -26,10 +26,41 @@ DISCO:
 public class Driver {
 
   public static void main( String[] args ) {
+	  
+	  Coin bob = new Coin("dime" , "tails");
+	Coin jeff = new Coin("nickel" , "heads");
+	  
+      int x = 0;
+      int y = 0;
+	  
+	  while (x < 10) {
+	      bob.flip();
+	      if (bob.getUpFace().equals("heads")){
+		      x += 1;
+	      }
+      }
+	  
+	  while (y < 22) {
+	      bob.flip();
+	      if (bob.equals(jeff)){
+		      x += 1;
+	      }
+      }
+	  
+	  while ((y%2005) < 65536) {
+		  bob.flip();
+		  if (bob.equals(jeff)){
+			  x+=1;
+		  }
+	  }
+	  }
+	  
+	System.out.println("heads: " + bob);
+	System.out.println("matches:" + y);
 
     //build Objects from blueprint specified by class Coin
 
-
+/*
     //test default constructor
     //===================TOP==========================
     Coin mine = new Coin();
@@ -62,36 +93,7 @@ public class Driver {
       */
 	  
       //hw24
-	Coin bob = new Coin("dime" , "tails");
-	Coin jeff = new Coin("nickel" , "heads");
-	  
-      int x = 0;
-      int y = 0;
-	  
-	  while (x < 10) {
-	      bob.flip();
-	      if (bob.getUpFace().equals("heads")){
-		      x += 1;
-	      }
-      }
-	  
-	  while (y < 22) {
-	      bob.flip();
-	      if (bob.equals(jeff)){
-		      x += 1;
-	      }
-      }
-	  
-	  while ((y%2005) < 65536) {
-		  bob.flip();
-		  if (bob.equals(jeff)){
-			  x+=1;
-		  }
-	  }
-	  }
-	  
-	System.out.println("heads: " + bob);
-	System.out.println("matches:" + y);
+	
 
 
       // ====================BOTTOM======================*/
