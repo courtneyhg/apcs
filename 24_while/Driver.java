@@ -19,7 +19,7 @@ Time spent: 1 hour */
 
 /*
 QCC:
-why does order matter? i thought since java was compilable, it didn't matter what order we wrote code.
+
 DISCO:
 */
 
@@ -27,35 +27,7 @@ public class Driver {
 
   public static void main( String[] args ) {
 	  
-	  Coin bob = new Coin("dime" , "tails");
-	Coin jeff = new Coin("nickel" , "heads");
-	  
-      int x = 0;
-      int y = 0;
-	  
-	  while (x < 10) {
-	      bob.flip();
-	      if (bob.getUpFace().equals("heads")){
-		      x += 1;
-	      }
-      }
-	  
-	  while (y < 22) {
-	      bob.flip();
-	      if (bob.equals(jeff)){
-		      x += 1;
-	      }
-      }
-	  
-	  while ((y%2005) < 65536) {
-		  bob.flip();
-		  if (bob.equals(jeff)){
-			  x+=1;
-		  }
-	  }
-	  }
-	  
-	System.out.println(  "Heads "     +  bob.getFlipCtr() );
+
     //build Objects from blueprint specified by class Coin
 
 /*
@@ -91,7 +63,35 @@ public class Driver {
       */
 	  
       //hw24
-	
+	Coin bob = new Coin("dime" , "tails");
+	Coin jeff = new Coin("nickel" , "heads");
+	  
+	      int x = 0;
+	      int y = 0;
+	  
+	  while (x < 10) {
+	      bob.flip();
+	      if (bob.getUpFace().equals("heads")){
+		      x += 1;
+	      }
+      }
+	  
+	  while (y < 22) {
+	      bob.flip();
+	      if (bob.equals(jeff)){
+		      x += 1;
+	      }
+      }
+	  
+	  while ((y%2005) < 65536) {
+		  bob.flip();
+		  if (bob.equals(jeff)){
+			  x+=1;
+		  }
+	  }
+	  }
+	  
+	System.out.println( "Heads: " + bob.getHeadsCtr() );
 
 
       // ====================BOTTOM======================*/
