@@ -85,6 +85,10 @@ public class Driver {
 			  x+=1;
 		  }
 	  }
+	  
+	  System.out.println("/n Number of heads:" + x);
+	  System.out.println("/n Number of matches:" + y);
+	  
 
 
       // ====================BOTTOM======================*/
