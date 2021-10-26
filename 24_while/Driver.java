@@ -61,7 +61,7 @@ public class Driver {
       }
       
       //hw24
-      Coin bob = new Coin();
+      Coin bob = new Coin("dime" , "tails");
       int x = 0;
       int y = 0;
 	  
