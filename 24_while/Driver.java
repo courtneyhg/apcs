@@ -29,7 +29,7 @@ public class Driver {
 
     //build Objects from blueprint specified by class Coin
 
-/*
+
     //test default constructor
     //===================TOP==========================
     Coin mine = new Coin();
@@ -90,7 +90,7 @@ public class Driver {
 	  }
 	  }
 	  
-	System.out.println("heads:" + bob);
+	System.out.println("heads: " + bob);
 	System.out.println("matches:" + y);
 
 
