@@ -90,8 +90,8 @@ public class Driver {
 	  }
 	  }
 	  
-	System.out.println("Number of heads:" + bob);
-	System.out.println("Number of matches:" + y);
+	System.out.println("heads:" + bob);
+	System.out.println("matches:" + y);
 
 
       // ====================BOTTOM======================*/
