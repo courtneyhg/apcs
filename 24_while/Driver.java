@@ -82,7 +82,7 @@ public class Driver {
 	      }
       }
 	  
-	  while ((y < 65536) && (y % 2005)) {
+	  while ((y < 65536) & (y % 2005)) {
 		  bob.flip();
 		  if (bob.equals(jeff)){
 			  x+=1;
