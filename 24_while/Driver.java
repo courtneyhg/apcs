@@ -13,9 +13,9 @@
 /*
 Mochi Yoshi - Yuki Feng, Courtney Huang
 APCS
-HW 23: What Does Equality Look Like?
-2021 10 23
-Time spent: 1.5 hours */
+HW 24: Get It While You Can
+2021-10-25
+Time spent: 1 hour */
 
 /*
 QCC:
@@ -64,12 +64,27 @@ public class Driver {
       Coin bob = new Coin();
       int x = 0;
       int y = 0;
-      while (x < 10) {
-	   bob.flip();
-	   if (bob.getUpFace().equals("heads")){
-	   x += 1;
-	   }
-	   }
+	  
+	  while (x < 10) {
+	      bob.flip();
+	      if (bob.getUpFace().equals("heads")){
+		      x += 1;
+	      }
+      }
+	  
+	  while (y < 22) {
+	      bob.flip();
+	      if (bob.equals(wayne)){
+		      x += 1;
+	      }
+      }
+	  
+	  while ((y < 65536) && (y % 2005)) {
+		  bob.flip();
+		  if (bob.equals(wayne)){
+			  x+=1;
+		  }
+	  }
 
 
       // ====================BOTTOM======================*/
