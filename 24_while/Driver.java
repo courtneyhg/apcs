@@ -83,13 +83,14 @@ public class Driver {
       }
 	  
 	  if (y % 2005) {
-		  x;
+		  return x;
 	  } else {
 		  while (y < 65536) {
 		  bob.flip();
 		  if (bob.equals(jeff)){
 			  x+=1;
 		  }
+	  }
 	  }
 	  
 	System.out.println("/n Number of heads:" + bob);
