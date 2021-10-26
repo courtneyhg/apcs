@@ -29,7 +29,7 @@ public class Driver {
 
     //build Objects from blueprint specified by class Coin
 
-
+/*
     //test default constructor
     //===================TOP==========================
     Coin mine = new Coin();
@@ -59,9 +59,12 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-      
+      */
+	  
       //hw24
-      Coin bob = new Coin("dime" , "tails");
+	Coin bob = new Coin("dime" , "tails");
+	Coin jeff = new Coin("nickel" , "heads");
+	  
       int x = 0;
       int y = 0;
 	  
@@ -74,14 +77,14 @@ public class Driver {
 	  
 	  while (y < 22) {
 	      bob.flip();
-	      if (bob.equals(wayne)){
+	      if (bob.equals(jeff)){
 		      x += 1;
 	      }
       }
 	  
 	  while ((y < 65536) && (y % 2005)) {
 		  bob.flip();
-		  if (bob.equals(wayne)){
+		  if (bob.equals(jeff)){
 			  x+=1;
 		  }
 	  }
