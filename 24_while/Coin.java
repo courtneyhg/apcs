@@ -73,7 +73,7 @@ public class Coin {
   public int getTailsCtr() {
     return tailsCtr;
   }
-  */
+  
   // ----------------------------
 
   /***
