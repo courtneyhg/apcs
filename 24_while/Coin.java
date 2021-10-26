@@ -57,29 +57,21 @@ public class Coin {
   public String getUpFace() {
     return upFace;
   }
-/*
-  public int getFlipCtr(int flip) {
-    int flipNum = flipCtr;
-    flipCtr = flip;
-    return flipNum;
+
+  public int getFlipCtr() {
+    return flipCtr;
   }
 
-  public double getValue(int val) {
-    int amount = value;
-    value = val;
-    return amount;
+  public double getValue() {
+    return value;
   }
 
-  public int getHeadsCtr(int head) {
-    int headNum = headsCtr;
-    headsCtr = head;
-    return headNum;
+  public int getHeadsCtr() {
+    return headsCtr;
   }
 
-  public int getTailsCtr(int tail) {
-    int tailNum = tailsCtr;
-    tailsCtr = tail;
-    return tailNum;
+  public int getTailsCtr() {
+    return tailsCtr;
   }
   */
   // ----------------------------
