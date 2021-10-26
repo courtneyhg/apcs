@@ -55,9 +55,7 @@ public class Driver {
 	  }
 	  }
 	  
-	System.out.println("heads: " + bob);
-	System.out.println("matches:" + y);
-
+	System.out.println(  "Heads "     +  bob.getFlipCtr() );
     //build Objects from blueprint specified by class Coin
 
 /*
