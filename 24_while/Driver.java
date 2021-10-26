@@ -39,9 +39,6 @@ public class Driver {
 
       //test 2nd overloaded constructor
       Coin wayne = new Coin( "dollar", "heads" );
-
-	  System.out.println("/n Number of heads:" + x);
-	  System.out.println("/n Number of matches:" + y);
 	  
       //test toString() methods of each Coin
       System.out.println("mine: " + mine);
@@ -89,6 +86,8 @@ public class Driver {
 		  }
 	  }
 	  
+	System.out.println("/n Number of heads:" + bob);
+	System.out.println("Number of matches:" + y);
 
 
       // ====================BOTTOM======================*/
