@@ -19,6 +19,7 @@ public class Stats {
 			else if (counter == a || counter == b){
 			return answer;
 			}
+			return answer;
 		}
 	}
 	
