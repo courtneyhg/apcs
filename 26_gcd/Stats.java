@@ -13,7 +13,7 @@ public class Stats {
 		while ((counter < a) && (counter < b)){
 			if ((a%counter==0) && (b%counter==0)){
 				answer += 1;
-				return anwer;
+				return answer;
 			}
 			else if (answer == a && answer == b){
 			return answer;
