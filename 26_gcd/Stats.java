@@ -13,7 +13,7 @@ public class Stats {
 			if ((a%answer==0) && (b%answer==0)){
 				answer += 1;
 			}
-			else if (answer == a || answer == b){
+			else if (answer == a && answer == b){
 			return answer;
 			}
 			
