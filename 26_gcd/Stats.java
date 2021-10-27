@@ -1,9 +1,9 @@
 public class Stats {
 	public static void main (String [] args){
-		System.out.println(gcd(15, 18));
-		System.out.println(gcd(4, 24));
-		System.out.println(gcd(21, 14));
-		System.out.println(gcd(5, 5));
+		System.out.println(gcdEW(15, 18));
+		System.out.println(gcdEW(4, 24));
+		System.out.println(gcdEW(21, 14));
+		System.out.println(gcdEW(5, 5));
 	}
 	
 	/*
