@@ -28,6 +28,7 @@ public class Stats {
 	//}
 	
 	// while-looped based iterative algotitmn
+		/*
 	public static int gcdEW(int a, int b){
 		int counter;
 		if (a == b){
@@ -48,4 +49,5 @@ public class Stats {
 			}
 			return counter;
 	}
+	*/
 }
