@@ -1,4 +1,4 @@
-public class Stats {
+rpublic class Stats {
 	public static void main (String [] args){
 		System.out.println(gcd(15, 18));
 		System.out.println(gcd(4, 24));
@@ -15,7 +15,7 @@ public class Stats {
 				return answer;
 			}
 			else if ((a%counter==0) && (b%counter==0)){
-			answer += 1;
+			answer -= 1;
 			}
 			counter += 1;
 		}
