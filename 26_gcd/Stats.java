@@ -10,17 +10,18 @@ public class Stats {
 	public static int gcd(int a, int b){
 		int counter = 1;
 		int answer = a;
-		while ((counter < a) && (counter < b)){
-			if (answer == a && answer == b){
-				return answer;
+		if (a < b) {
+			while (counter < a){
+				if ((counter == a) && (counter == b)){
+					return answer;
+				}
+				else if ((a%counter==0) && (b%counter==0)){
+					answer += 1;
+				}
+				counter += 1;
 			}
-			else if ((a%counter==0) && (b%counter==0)){
-			answer -= 1;
-			}
-			counter += 1;
+			return answer;
 		}
-		return answer;
-	}
 	
 	// recursive algorithmn
 	//public static int gcdER(int a, int b){
