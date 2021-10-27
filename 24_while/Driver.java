@@ -68,6 +68,7 @@ public class Driver {
 	  
 	      int x = 0;
 	      int y = 0;
+	      int z = 0;
 	  
 	  while (x < 10) {
 	      bob.flip();
@@ -79,19 +80,21 @@ public class Driver {
 	  while (y < 22) {
 	      bob.flip();
 	      if (bob.equals(jeff)){
-		      x += 1;
+		      y += 1;
 	      }
       }
 	  
-	  while ((y%2005) < 65536) {
+	  while ((z%2005 == 0) && (z < 65536)) {
 		  bob.flip();
+		  jeff.flip();
 		  if (bob.equals(jeff)){
-			  x+=1;
+			  z+=1;
 		  }
 	  }
-	  }
 	  
-	System.out.println( "Heads: " + bob.getHeadsCtr() );
+	System.out.println("Heads: " + bob.getHeadsCtr());
+	System.out.println("Matches: " + y);
+	System.out.println("At least 65536 and divisible by 2005: " + z);
 
 
       // ====================BOTTOM======================*/
