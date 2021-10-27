@@ -91,7 +91,7 @@ public class Driver {
 	  }
 	  }
 	  
-	System.out.println( "Heads: " + bob.getHeadsCtr() );
+	System.out.println("Heads:" + bob.getHeadsCtr() );
 
 
       // ====================BOTTOM======================*/
