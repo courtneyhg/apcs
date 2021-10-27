@@ -1,15 +1,22 @@
 public class Stats {
 	public static void main (String [] args){
-		System.out.println(gcd(15, 18));
-		System.out.println(gcd(4, 24));
-		System.out.println(gcd(21, 14));
-		System.out.println(gcd(5, 5));
+		System.out.println(gcdEW(15, 18));
+		System.out.println(gcdEW(4, 24));
+		System.out.println(gcdEW(21, 14));
+		System.out.println(gcdEW(5, 5));
 	}
 	
 	
 	// "brute force" approach beginning at 1 and working up to lesser input
 	public static int gcd(int a, int b){
-		
+		int answer;
+		while (1 < counter){
+			if ((a%counter==0) && (b%counter==0)){
+				answer += 1;
+			}
+			else if (counter == a || counter == b){
+			return answer;
+		}
 	}
 	
 	// recursive algorithmn
