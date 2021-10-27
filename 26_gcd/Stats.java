@@ -9,7 +9,7 @@ public class Stats {
 	// "brute force" approach beginning at 1 and working up to lesser input
 	public static int gcd(int a, int b){
 		int counter = 1;
-		int answer = x;
+		int answer = a;
 		while ((counter < a) && (counter < b)){
 			if ((a%counter==0) && (b%counter==0)){
 				answer += 1;
