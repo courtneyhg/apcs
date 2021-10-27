@@ -14,7 +14,6 @@ public class Stats {
 			if ((a%counter==0) && (b%counter==0)){
 				answer += 1;
 				counter += 1;
-				return answer;
 			}
 			else if (answer == a && answer == b){
 			return answer;
