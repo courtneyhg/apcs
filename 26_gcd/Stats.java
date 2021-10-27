@@ -16,8 +16,8 @@ public class Stats {
 			else if (answer == a || answer == b){
 			return answer;
 			}
+			return answer;
 		}
-		return answer;
 	}
 	
 	// recursive algorithmn
