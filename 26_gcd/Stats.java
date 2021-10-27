@@ -1,4 +1,4 @@
-rpublic class Stats {
+public class Stats {
 	public static void main (String [] args){
 		System.out.println(gcd(15, 18));
 		System.out.println(gcd(4, 24));
