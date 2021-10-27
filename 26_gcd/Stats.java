@@ -11,13 +11,13 @@ public class Stats {
 		int counter = 1;
 		int answer = a;
 		while ((counter < a) && (counter < b)){
-			if ((a%counter==0) && (b%counter==0)){
-				answer += 1;
-				counter += 1;
+			if (answer == a && answer == b){
+				return answer;
 			}
-			else if (answer == a && answer == b){
-			return answer;
+			else if ((a%counter==0) && (b%counter==0)){
+			answer += 1;
 			}
+			counter += 1;
 		}
 		return answer;
 	}
