@@ -23,6 +23,7 @@ public class Stats {
 			}
 			return answer;
 		}
+	}
 	
 	// recursive algorithmn
 	//public static int gcdER(int a, int b){
