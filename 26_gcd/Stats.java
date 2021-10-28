@@ -160,7 +160,7 @@ public class Stats {
 			return answer;
 		}
 	}
-
+Terminal says there is an error in here: "missing return statement"
 	
 	// recursive algorithmn
 	//public static int gcdER(int a, int b){
