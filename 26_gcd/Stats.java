@@ -15,7 +15,7 @@ Questions:
  * What if we were to write a recursive reduction with a while loop inside? Would that be more efficient?
 */
 
-
+/*
 public class Stats {
 
 	public static void main( String[] args ) {
@@ -131,36 +131,49 @@ public class Stats {
 		return 0;
 	}
 }
-/*
-Own code prior to working in a group:
+*/
+//Own code prior to working in a group:
 
 public class Stats {
 	public static void main (String [] args){
-		System.out.println(gcdEW(15, 18));
-		System.out.println(gcdEW(4, 24));
-		System.out.println(gcdEW(21, 14));
-		System.out.println(gcdEW(5, 5));
+		System.out.println(gcd(15, 18));
+		System.out.println(gcd(4, 24));
+		System.out.println(gcd(21, 14));
+		System.out.println(gcd(5, 5));
 	}
 	
 	
 	// "brute force" approach beginning at 1 and working up to lesser input
 	public static int gcd(int a, int b){
 		int counter = 1;
-		int answer = a;
+		int answer = 0;
 		if (a < b) {
-			while (counter < a){
-				if ((counter == a) && (counter == b)){
-					return answer;
+			while (counter <= a){
+				if ((a%counter==0) && (b%counter==0)){
+					answer = counter;
 				}
-				else if ((a%counter==0) && (b%counter==0)){
-					answer += 1;
-				}
+				//System.out.println(counter);
 				counter += 1;
 			}
-			return answer;
 		}
-	}
-Terminal says there is an error in here: "missing return statement"
+	
+		if (b < a) {
+			while (counter <= b){
+				if ((a%counter==0) && (b%counter==0)){
+					answer = counter;
+				}
+					//System.out.println(counter);
+					counter += 1;
+				}
+			}
+
+		if (b == a) {
+				return a;
+		}
+		return answer;
+		}
+	
+//Terminal says there is an error in here: "missing return statement"
 	
 	// recursive algorithmn
 	//public static int gcdER(int a, int b){
@@ -188,4 +201,4 @@ Terminal says there is an error in here: "missing return statement"
 			return counter;
 	}
 }
-*/
+

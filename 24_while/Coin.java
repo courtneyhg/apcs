@@ -13,6 +13,7 @@ public class Coin {
   private String denomination;
   private int flipCtr, headsCtr, tailsCtr;
   private double bias = .5;
+  private int matches;
 
   // default contructor
   public Coin() {
@@ -72,6 +73,10 @@ public class Coin {
 
   public int getTailsCtr() {
     return tailsCtr;
+  }
+  
+   public int getMatchesCtr() {
+    return matches;
   }
   
   // ----------------------------
