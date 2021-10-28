@@ -23,6 +23,7 @@ public class Stats {
 			}
 			return answer;
 		}
+	}
 
 	
 	// recursive algorithmn
