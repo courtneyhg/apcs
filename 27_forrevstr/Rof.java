@@ -9,6 +9,10 @@ public class Rof {
 		System.out.println(reverseF("warts"));
 		System.out.println(reverseF("live"));
 		
+		System.out.println(reverseR("evil"));
+		System.out.println(reverseR("straw"));
+		System.out.println(reverseR("desserts"));
+		
 		/*
 		// basic example of a while loop converted into a for loop:
 			int x = 0;
@@ -41,4 +45,12 @@ public class Rof {
 		}
 		return reverse;
 	  }
+	
+	 // a non-empty String s and returns s with its letters reversed. Employs recursion.
+	   public static String reverseR (String s) {
+	     if (s.length() > 1) {
+	       return reverseR(s.substring(1)) + s.substring(0,1);
+	      }
+	      return s;
+  }
 }
