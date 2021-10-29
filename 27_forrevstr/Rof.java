@@ -5,7 +5,7 @@ public class Rof {
 		System.out.println(fenceF(2));
 		System.out.println(fenceF(3));
 
-    	System.out.println(reverseF("stressed"));
+    		System.out.println(reverseF("stressed"));
 		/*
 		// basic example of a while loop converted into a for loop:
 			int x = 0;
