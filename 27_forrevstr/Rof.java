@@ -1,3 +1,18 @@
+/*
+Impressment Officers: Courtney Huang, Yuki Feng, Lea Kwok
+APCS
+HW 27: FOR the Love of Strings
+2021 10 29
+Time spent: 1 hr
+*/
+
+/*
+QCC:
+DISCO:
+- substring can either have substring(beginIndex) or substring(beginIndex,endIndex)
+- the latter can be used to reference a section of the string from endIndex - beginIndex. endIndex is non inclusive.
+  - example: substring(4,8) only return from index 4 to 7 -> 4 characters seen -> "hamburger" = s, s.substring(4,8) -> "urge"
+*/
 public class Rof {
 
 	public static void main (String [] args) {
