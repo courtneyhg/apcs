@@ -86,7 +86,6 @@ public class Driver {
 	  
 	  while (z < 65536) {
 		  bob.flip();
-		  jeff.flip();
 		  if ((z%2005 == 0) && (bob.equals(jeff))){
 			  z+=1;
 		  }
