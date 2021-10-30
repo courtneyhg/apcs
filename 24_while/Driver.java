@@ -92,7 +92,9 @@ public class Driver {
 	  }
 	  while (z%2005 != 0){
 		  bob.flip();
-		  z+=1;
+		  if (bob.equals(jeff)){
+		      z += 1;
+	      }
 	  }
 	  
 	System.out.println("Heads: " + bob.getHeadsCtr());
