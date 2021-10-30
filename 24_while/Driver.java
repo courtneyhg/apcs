@@ -97,7 +97,7 @@ public class Driver {
 	      }
 	  }
 	  
-	System.out.println("Heads: " + bob.getHeadsCtr());
+	System.out.println("Heads: " + x);
 	System.out.println("Matches: " + y);
 	System.out.println("At least 65536 and divisible by 2005: " + z);
 
