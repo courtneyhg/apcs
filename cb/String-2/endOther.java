@@ -1,13 +1,32 @@
 public boolean endOther(String a, String b) {
-  a.toLowerCase() = String a;
-  b.toLowerCase() = String b;
-  int lengthA = a.length(a);
-  int lengthB = b.length(b);
-  String partA = b.substring(lengthB - lengthA, lengthA);
-  if (a.equals.partA) {
-    return true;
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+  int lengthA = a.length();
+  int lengthB = b.length();
+  if (lengthA == lengthB) {
+    if (a.equals(b)) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  else if (lengthA > lengthB) {
+    String partA = a.substring(lengthA - lengthB, lengthA);
+    if (b.equals(partA)) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
   else {
-    return false;
+    String partB = b.substring(lengthB - lengthA, lengthB);
+    if (a.equals(partB)) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
