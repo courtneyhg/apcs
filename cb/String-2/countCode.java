@@ -1,69 +1,11 @@
-public boolean endOther(String a, String b) {
-  a = a.toLowerCase();
-  b = b.toLowerCase();
-  int lengthA = a.length();
-  int lengthB = b.length();
-  if (lengthA == lengthB) {
-    if (a.equals(b)) {
-      return true;
-    }
-    else {
-      return false;
+public int countCode(String str) {
+  int counter = 0;
+  for (int i = 0; i < (str.length()-3); i ++) {
+    if ((str.substring(i, i + 2)).equals("co")) {
+      if ((str.substring(i + 3, i + 4)).equals("e")){
+        counter += 1;
+      }
     }
   }
-  else if (lengthA > lengthB) {
-    String partA = a.substring(lengthA - lengthB, lengthA);
-    if (b.equals(partA)) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-  else {
-    String partB = b.substring(lengthB - lengthA, lengthB);
-    if (a.equals(partB)) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
+  return counter;
 }
-
-/*
--- This didn't work because I didn't define partA and partB in the if statements.
--- Why do I have to define it in the if statements?
-public boolean endOther(String a, String b) {
-  a = a.toLowerCase();
-  b = b.toLowerCase();
-  int lengthA = a.length();
-  int lengthB = b.length();
-  String partA = a.substring(lengthA - lengthB, lengthA);
-  String partB = b.substring(lengthB - lengthA, lengthB);
-  if (lengthA == lengthB) {
-    if (a.equals(b)) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-  else if (lengthA > lengthB) {
-    if (b.equals(partA)) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-  else {
-    if (a.equals(partB)) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-}
-*/
