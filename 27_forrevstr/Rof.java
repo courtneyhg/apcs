@@ -13,6 +13,16 @@ DISCO:
 - the latter can be used to reference a section of the string from endIndex - beginIndex. endIndex is non inclusive.
   - example: substring(4,8) only return from index 4 to 7 -> 4 characters seen -> "hamburger" = s, s.substring(4,8) -> "urge"
 */
+
+/*
+	 // a non-empty String s and returns s with its letters reversed. Employs recursion.
+	   public static String reverseR (String s) {
+	     if (s.length() > 1) {
+	       return reverseR(s.substring(1)) + s.substring(0,1);
+	      }
+	      return s;
+  }
+  */
 public class Rof {
 
 	public static void main (String [] args) {
@@ -61,11 +71,31 @@ public class Rof {
 		return reverse;
 	  }
 	
-	 // a non-empty String s and returns s with its letters reversed. Employs recursion.
-	   public static String reverseR (String s) {
-	     if (s.length() > 1) {
-	       return reverseR(s.substring(1)) + s.substring(0,1);
-	      }
-	      return s;
+	
+	
+  public static String reverseR (String s) {
+  	String reverse = "";
+  	if (s.length() == 1){
+  		return s;
+  	}
+  	else {
+  		reverse += s.substring(s.length()-1, s.length());
+  		return reverse + reverseR(s.substring(0, s.length()-1));
+  	}
+  	}
+  	
+  	
   }
-}
+  
+  /*
+    public static String reverseR (String s) {
+
+  	if (s.length() == 1){
+  	return s;
+  	}
+  	else {
+  	return s.substring(s.length()-1, s.length()) + reverseR(s.substring(0, s.length()-1));
+  	}
+  	}
+  }
+  */
