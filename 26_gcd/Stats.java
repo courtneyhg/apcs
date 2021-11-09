@@ -132,14 +132,28 @@ public class Stats {
 	}
 }
 */
+
 //Own code prior to working in a group:
 
 public class Stats {
 	public static void main (String [] args){
+		System.out.println("========= LOOP METHOD ========");
 		System.out.println(gcd(15, 18));
 		System.out.println(gcd(4, 24));
 		System.out.println(gcd(21, 14));
 		System.out.println(gcd(5, 5));
+		
+		System.out.println("========= BETTER LOOP METHOD ========");
+		System.out.println(gcdEW(15, 18));
+		System.out.println(gcdEW(4, 24));
+		System.out.println(gcdEW(21, 14));
+		System.out.println(gcdEW(5, 5));
+		
+		System.out.println("========= RECURSIVE METHOD ========");
+		System.out.println(gcdER(15, 18));
+		System.out.println(gcdER(4, 24));
+		System.out.println(gcdER(21, 14));
+		System.out.println(gcdER(5, 5));
 	}
 	
 	
@@ -173,11 +187,21 @@ public class Stats {
 		return answer;
 		}
 	
-//Terminal says there is an error in here: "missing return statement"
+	//Terminal says there is an error in here: "missing return statement"
 	
 	// recursive algorithmn
-	//public static int gcdER(int a, int b){
-	//}
+	public static int gcdER(int a, int b){
+		int counter;
+		if (a == b){
+		return a;
+		}
+		else if (a > b){
+		return gcdER(a-b, b);
+		}
+		else {
+		return gcdER(b-a, a);
+		}
+	}
 	
 	// while-looped based iterative algotitmn
 	public static int gcdEW(int a, int b){
