@@ -1,0 +1,46 @@
+Courtney Huang
+APCS
+HW36 -- All Quacked Up
+2021-11-18
+
+Compile-time errors
+- use incremental development to avoid making errors
+- fix one error at a time when the compiler is spewing error messages
+- look for common syntax errors
+- make sure you and the compiler are looking at the same code
+- try debugging by bisection
+-- make a backup file, delete half the code, and try compiling again
+--- start bringing back the code you deleted a little at a time while fixing errors along the way
+- error messages tell you something is wrong, but the solutions they suggest are unreliable
+
+Run-time errors
+- if a program stops and doesn't do anything, it usually means its in an infinite loop/recursion
+- for infinite loops, add a print statement at the end of the loop to display values of the variables in the condition and the value of the condition
+-- The last time through the loop, the condition should be false.
+--- seeing the values of x and y can help figure out why the loop is not stopping
+- in a recursive method, there should be a base case
+-- add a print statement at the beginning of the method to display the parameters. This can help see why the parameters are moving toward the base case.
+- for problems with flow of execution, add print statements so that when you run the program it displays a trace of each method as it is evoked
+-- one of the most common errors is providing arguments in the wrong errors
+- NullPointerException - you tried to access an instance variable or invoke a method on an object that is currently null
+-- elements in a declared variable with an array type are null until a value is assigned to them
+- ArrayIndexOutOfBoundsException - index you are using to access an array is negative or greater than array.length-1
+-- add a print statement to display the value of the index and the length of the array
+- StackOverflowError - infinite recursion
+- FileNotFoundException - Java can't find the file
+- ArithmeticException - something went wrong during an arithmetic operation (division by zero)
+- using print statements for debugging can make cause you to be buried in output
+-- simplify the output - comment out, combine, or format print statements
+--- simply the program - scale down the problem the program is working on, clean up the code
+
+Logic errors
+- make sure your mental model of what your code does matches with the program
+- you can break your mental model into components (classes and methods) and test them independently
+- break complex expressions into a series of assignments to temporary variables.
+- in big expressions, keep in mind order of operations
+- instead of writing everything in one statement, use temporary variables so you can display any of the intermediate variables before returning.
+- change print to println
+- take a break, take time away from the computer to think
+- talk to your duckie!
+- sometimes a bug indicates you don't understand the program or your algorithm contains an errors
+-- work through test cases by hand, draw diagrams to represent computations
