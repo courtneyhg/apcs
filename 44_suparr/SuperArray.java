@@ -1,7 +1,10 @@
-// Clyde "Thluffy" Sinclair
-// APCS1 pd0
-// HW44 -- expanding SuperArray functionality, encapsulation
-// 2021-12-08w
+/*
+Java Coffee - Courtney Huang, Jason Yang, Yuki Feng
+APCS1 pd7
+HW44 -- Array of Grade 316
+2021-12-08
+Time Spent: 0.5 hr
+*/
 
 /***************************
  * class SuperArray version 2.0
@@ -77,14 +80,20 @@ public class SuperArray
   {
     _data[_size] = newVal;
     _size ++;
-    /* YOUR IMPLEMENTATION HERE */
   }
 
 
   //inserts an item at index
   public void add( int index, int newVal )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    _size ++;
+    for (int i = _size-1; i > 0; i--) {
+    	_data[i] = _data[i-1];
+      if (i == index+1) {
+        _data[index] = newVal;
+        break;
+      }
+    }
   }
 
 
@@ -92,7 +101,15 @@ public class SuperArray
   //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    _size --;
+    for (int i = 0; i <= _size-1; i++) {
+      if (i < index) {
+        _data[i] = _data[i];
+      }
+      else {
+        _data[i] = _data[i+1];
+      }
+    }
   }
 
 
@@ -156,7 +173,7 @@ public class SuperArray
 
       System.out.println("Printing populated SuperArray mayfield...");
       System.out.println(mayfield);
-/*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+
       mayfield.remove(3);
       System.out.println("Printing SuperArray mayfield post-remove...");
       System.out.println(mayfield);
@@ -173,6 +190,7 @@ public class SuperArray
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+/*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
