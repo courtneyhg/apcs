@@ -18,7 +18,7 @@ Time Spent: 0.5 hr
  * removing an element at specified index
  ***************************/
 
-public class SuperArray implements ListInt
+public abstract class SuperArray implements ListInt
 {
 
   private int[] _data;  //underlying ("encapsulated") container
@@ -174,12 +174,12 @@ public class SuperArray implements ListInt
       System.out.println("Printing populated SuperArray mayfield...");
       System.out.println(mayfield);
 
-      mayfield.remove(3);
-      System.out.println("Printing SuperArray mayfield post-remove...");
-      System.out.println(mayfield);
-      mayfield.remove(3);
-      System.out.println("Printing SuperArray mayfield post-remove...");
-      System.out.println(mayfield);
+      // mayfield.remove(3);
+      // System.out.println("Printing SuperArray mayfield post-remove...");
+      // System.out.println(mayfield);
+      // mayfield.remove(3);
+      // System.out.println("Printing SuperArray mayfield post-remove...");
+      // System.out.println(mayfield);
 
       mayfield.add(3,99);
       System.out.println("Printing SuperArray mayfield post-insert...");
