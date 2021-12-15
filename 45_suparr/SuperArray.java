@@ -1,7 +1,7 @@
 /*
 Java Coffee - Courtney Huang, Jason Yang, Yuki Feng
 APCS1 pd7
-HW44 -- Array of Grade 316
+HW45 -- Array of Titanium
 2021-12-08
 Time Spent: 0.5 hr
 */
@@ -18,7 +18,7 @@ Time Spent: 0.5 hr
  * removing an element at specified index
  ***************************/
 
-public class SuperArray
+public class SuperArray implements ListInt
 {
 
   private int[] _data;  //underlying ("encapsulated") container
@@ -76,10 +76,11 @@ public class SuperArray
 
 
   //adds an item after the last item
-  public void add( int newVal )
+  public boolean add( int newVal )
   {
     _data[_size] = newVal;
     _size ++;
+    return true;
   }
 
 
@@ -87,7 +88,7 @@ public class SuperArray
   public void add( int index, int newVal )
   {
     _size ++;
-    for (int i = _size-1; i > 0; i--) {
+    for (int i = _size; i > index; i--) {
     	_data[i] = _data[i-1];
       if (i == index+1) {
         _data[index] = newVal;
@@ -99,9 +100,9 @@ public class SuperArray
 
   //removes the item at index
   //shifts elements left to fill in newly-empted slot
-  public void remove( int index )
+  public int remove( int index )
   {
-    _size --;
+    int oldVal = this.get(index);
     for (int i = 0; i <= _size-1; i++) {
       if (i < index) {
         _data[i] = _data[i];
@@ -110,14 +111,16 @@ public class SuperArray
         _data[i] = _data[i+1];
       }
     }
+    _size --;
+    return oldVal;
   }
 
 
-  // //return number of meaningful items in _data
-  // public int size()
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
+  //return number of meaningful items in _data
+  public int size()
+  {
+    return _size;
+  }
 
 
 
@@ -161,7 +164,7 @@ public class SuperArray
       // + curtis._data.length );
       // }
 
-      SuperArray mayfield = new SuperArray();
+      ListInt mayfield = new SuperArray();
       System.out.println("Printing empty SuperArray mayfield...");
       System.out.println(mayfield);
 
