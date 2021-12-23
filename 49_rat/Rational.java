@@ -1,16 +1,20 @@
 /*
 Java Coffee: Courtney Huang, Yuki Feng, Jason Yang
 APCS
-HW
-2021-12-22
-time: 0.5 hr
+HW49 -- Rational Standards Compliance
+12/22/21
+time: 1hr
+2021-12-23
 */
 
 /*
 DISCO:
-you can use gcd as helper in reduce to find the divisor that you will use to divide numerator and denominator of the constructor it is invoked upon
+We can use "instaceof" to see if an Object is an instance of a certain class.
+throw new ClassCastException allows you to custom your own error message
 QCC:
+what if there were two different objects as inputs?
 */
+
 
 public class Rational{
     private int denominator;
@@ -83,31 +87,20 @@ public class Rational{
       this.denominator = this.denominator / divisor;
     }
 
-    public int compareTo(Rational a){
-      Rational w = new Rational(this.numerator, this.denominator);
-      w.subtract(a);
-      return w.numerator;
+    public int compareTo(Object other){
+    if (other instanceof Rational) {
+      Rational r = (Rational) other;
+
+      return (this.numerator * r.denominator) - (this.denominator * r.numerator);
     }
+    throw new ClassCastException("\n CompareTo() input not a Rational");
+  }
 
-    public static void main(String [] args){
-        Rational r = new Rational(2,3); //Stores rational number 2/3
-        Rational s = new Rational(1,2); //Stores rational number 1/2
-        Rational t = new Rational(4,18); //Stores the rational number 4/18
-        // r.multiply(s); //Multiplies r by s, updates r to 2/6.  s remains 1/2
-        // r.divide(s); //divides r by s, changes r to 4/3, s remains 1/2
-        // r.add(s); // adds s to r, updates r to 7/6, s remains 1/2
-        // r.subtract(s); // subtracts s from r, updates r to 1/6, s remains 1/2
-        // System.out.println(gcd(4,18)); //finds gcd of 4 and 18 -> 2
-        t.reduce(); //reduces t to simplest form, 4/18 -> 2/9 ;
-        System.out.println("r: \n fraction: " + r.toString() + "\n float: " + r.floatValue());// r
-        System.out.println("s: \n fraction: " + s.toString() + "\n float: " + s.floatValue());// s
-        System.out.println("t: \n fraction: " + t.toString() + "\n float: " + t.floatValue());// t
-
-        // Rational w = new Rational(4,0);
-        // System.out.println(w.toString());
-        System.out.println(r.compareTo(t));
-        System.out.println(r.compareTo(r));
-        System.out.println(s.compareTo(r));
-
+  public boolean equals(Object other) {
+    if (other instanceof Rational) {
+      Rational r = (Rational) other;
+      return this.compareTo(r) == 0;
     }
+    return false;
+  }
 }
