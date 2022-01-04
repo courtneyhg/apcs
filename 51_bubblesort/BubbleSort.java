@@ -60,13 +60,16 @@ public class BubbleSort
   // postcondition: data's elements sorted in ascending order
   public static void bubbleSortV( ArrayList<Integer> data )
   {
-    for (int i = data.size()-1; i>0; i--){
-      int bob = data.get(i);
-      int jeff = data.get(i-1);
-
-      if (bob < jeff){
-        data.set(i, jeff);
-        data.set(i-1, bob);
+    for (int p=0; p < data.size(); p++){ //makes sure it goes through all passes
+      for (int i = data.size()-1; i>0; i--){ //for loop for each pass
+        //gets element at index
+        int bob = data.get(i);
+        int jeff = data.get(i-1);
+        //swap ints
+        if (bob < jeff){
+          data.set(i, jeff);
+          data.set(i-1, bob);
+        }
       }
     }
   }
@@ -75,10 +78,11 @@ public class BubbleSort
   // ArrayList-returning bubbleSort
   // postcondition: order of input ArrayList's elements unchanged
   //                Returns sorted copy of input ArrayList.
-  // public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
-  // {
-  //   //return data;
-  // }
+  public static ArrayList<Integer> bubbleSort( ArrayList<Integer> input )
+  {
+    bubbleSortV(input);
+    return input;
+  }
 
 
   public static void main( String [] args )
@@ -86,22 +90,23 @@ public class BubbleSort
 
     /*===============for VOID methods=============
     ============================================*/
-      ArrayList glen = new ArrayList<Integer>();
-      glen.add(7);
-      glen.add(1);
-      glen.add(5);
-      glen.add(12);
-      glen.add(3);
-      System.out.println( "ArrayList glen before sorting:\n" + glen );
-      bubbleSortV(glen);
-      System.out.println( "ArrayList glen after sorting:\n" + glen );
-
-      ArrayList coco = populate( 10, 1, 1000 );
-      System.out.println( "ArrayList coco before sorting:\n" + coco );
-      bubbleSortV(coco);
-      System.out.println( "ArrayList coco after sorting:\n" + coco );
+      // ArrayList glen = new ArrayList<Integer>();
+      // glen.add(7);
+      // glen.add(1);
+      // glen.add(5);
+      // glen.add(12);
+      // glen.add(3);
+      // System.out.println( "ArrayList glen before sorting:\n" + glen );
+      // bubbleSortV(glen);
+      // System.out.println( "ArrayList glen after sorting:\n" + glen );
+      //
+      // ArrayList coco = populate( 10, 1, 1000 );
+      // System.out.println( "ArrayList coco before sorting:\n" + coco );
+      // bubbleSortV(coco);
+      // System.out.println( "ArrayList coco after sorting:\n" + coco );
 
     /*==========for AL-returning methods==========
+    ============================================*/
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -121,7 +126,7 @@ public class BubbleSort
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
-      ============================================*/
+
 
   }//end main
 
