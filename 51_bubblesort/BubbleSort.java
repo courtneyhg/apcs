@@ -1,7 +1,7 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Java Coffee: Courtney Huang, Yuki Feng, Jason Yang
+// APCS pd 7
 // HW51 -- implementing bubblesort
-// 2022-01-04t
+// 2022-01-03
 // time spent:  hrs
 
 /******************************
@@ -58,25 +58,34 @@ public class BubbleSort
   // VOID version of bubbleSort
   // Rearranges elements of input ArrayList
   // postcondition: data's elements sorted in ascending order
-  public static void bubbleSortV( ArrayList<Comparable> data )
+  public static void bubbleSortV( ArrayList<Integer> data )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    for (int i = data.size()-1; i>0; i--){
+      int bob = data.get(i);
+      int jeff = data.get(i-1);
+
+      if (bob < jeff){
+        data.set(i, jeff);
+        data.set(i-1, bob);
+      }
+    }
   }
 
 
   // ArrayList-returning bubbleSort
   // postcondition: order of input ArrayList's elements unchanged
   //                Returns sorted copy of input ArrayList.
-  public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
-  {
-    /* YOUR IMPLEMENTATION HERE */
-  }
+  // public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
+  // {
+  //   //return data;
+  // }
 
 
   public static void main( String [] args )
   {
 
     /*===============for VOID methods=============
+    ============================================*/
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -91,7 +100,6 @@ public class BubbleSort
       System.out.println( "ArrayList coco before sorting:\n" + coco );
       bubbleSortV(coco);
       System.out.println( "ArrayList coco after sorting:\n" + coco );
-      ============================================*/
 
     /*==========for AL-returning methods==========
       ArrayList glen = new ArrayList<Integer>();
