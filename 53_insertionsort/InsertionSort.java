@@ -108,6 +108,7 @@ public class InsertionSort
   public static void main( String [] args )
   {
     /*===============for VOID methods=============
+    ============================================*/
       System.out.println("\n*** Testing sort-in-place (void) version... *** ");
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
@@ -123,7 +124,6 @@ public class InsertionSort
       System.out.println( "\nArrayList coco before sorting:\n" + coco );
       insertionSortV(coco);
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
-      ============================================*/
 
     /*==========for AL-returning methods==========
       System.out.println( "*** Testing non-void version... *** " );
