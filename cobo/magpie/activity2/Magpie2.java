@@ -28,89 +28,76 @@ public class Magpie2
 	 *            the user statement
 	 * @return a response based on the rules given
 	 */
-   // because java compiles from top to bottom the first boolean will be prioritized in terms of choosing responses
-	public String getResponse(String statement)
-	{
-		String response = "";
-		if (statement.indexOf("no") >= 0)
-		{
-			response = "Why so negative?";
-		}
-    else if (statement.indexOf("dog") >= 0
-        || statement.indexOf("cat") >= 0)
-        {
-          response = "Tell me more about your pets";
-        }
-    else if (statement.indexOf("Mykolyk") >= 0)
-        {
-          response = "He sounds like a good teacher.";
-        }
-    else if (statement.indexOf("tired") >= 0)
-        {
-          response = "Go to sleep.";
-        }
-    else if (statement.indexOf("dead") >= 0)
-        {
-          response = "undead the dead";
-        }
-    else if (statement.indexOf("cry") >= 0)
-        {
-          response = "get a tissue";
-        }
-    // else if (statement.trim() == -1)
-    //     {
-    //       response = "Say something, please.";
-    //     }
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
-		{
-			response = "Tell me more about your family.";
-		}
-		else
-		{
-			response = getRandomResponse();
-		}
-		return response;
-	}
+	 public String getResponse(String statement){
+ 		String response = "";
+ 		if (statement.trim().length() == 0){
+			response = "say something";
+		} else if (statement.indexOf("no") >= 0)	{
+ 			response = "Why so negative?";
+ 		} else if (statement.indexOf("dog") >= 0 || statement.indexOf("cat") >= 0) {
+ 					response = "Tell me more about ur pets.";
+ 				}
+ 		else if (statement.indexOf("Mr. Mykolyk") >= 0 || statement.indexOf("Mykolyk") >= 0) {
+ 					response = "He sounds like a good teacher";
+ 				}
+ 		else if (statement.indexOf("i dead") >= 0){
+ 					response = "stay dead lol";
+ 				}
+ 		else if (statement.indexOf("crying") >= 0){
+ 					response = "keep crying noob";
+ 				}
+ 		else if (statement.indexOf("joe") >= 0|| statement.indexOf("mama") >= 0) {
+ 					response = "who dat";
+ 				}
+ 		else if (statement.indexOf("mother") >= 0
+ 				|| statement.indexOf("father") >= 0
+ 				|| statement.indexOf("sister") >= 0
+ 				|| statement.indexOf("brother") >= 0)
+ 		{
+ 			response = "Tell me more about your family.";
+ 		}
 
-	/**
-	 * Pick a default response to use if nothing else fits.
-	 * @return a non-committal string
-	 */
-	private String getRandomResponse()
-	{
-		final int NUMBER_OF_RESPONSES = 4;
-		double r = Math.random();
-		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
-		String response = "";
+ 		else
+ 		{
+ 			response = getRandomResponse();
+ 		}
+ 		return response;
+ 	}
 
-		if (whichResponse == 0)
-		{
-			response = "Interesting, tell me more.";
-		}
-		else if (whichResponse == 1)
-		{
-			response = "Hmmm.";
-		}
-		else if (whichResponse == 2)
-		{
-			response = "Do you really think so?";
-		}
-		else if (whichResponse == 3)
-		{
-			response = "You don't say.";
-		}
-    else if (whichResponse == 4)
-		{
-			response = "yassss";
-		}
-    else if (whichResponse == 5)
-		{
-			response = "joemama";
-		}
+ 	/**
+ 	 * Pick a default response to use if nothing else fits.
+ 	 * @return a non-committal string
+ 	 */
+ 	private String getRandomResponse()
+ 	{
+ 		final int NUMBER_OF_RESPONSES = 6;
+ 		double r = Math.random();
+ 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+ 		String response = "";
 
-		return response;
-	}
-}
+ 		if (whichResponse == 0)
+ 		{
+ 			response = "Interesting, tell me more.";
+ 		}
+ 		else if (whichResponse == 1)
+ 		{
+ 			response = "Hmmm.";
+ 		}
+ 		else if (whichResponse == 2)
+ 		{
+ 			response = "Do you really think so?";
+ 		}
+ 		else if (whichResponse == 3)
+ 		{
+ 			response = "You don't say.";
+ 		}
+ 		else if (whichResponse == 4) {
+ 			response = "Cool";
+ 		}
+ 		else if (whichResponse ==  5) {
+ 			response = "I see.";
+ 		}
+
+ 		return response;
+ 	}
+ }
