@@ -39,7 +39,7 @@ public class StatPrinterApp
 
       System.out.println( "sp1 testing... " );
       sp1.max( al1 );
-      //sp1.printHistogram( 50 );
+      sp1.printHistogram( 50 );
 
 
 
@@ -61,8 +61,9 @@ public class StatPrinterApp
     for( Integer i : al2 ) {
     System.out.println( i + " is local mode?\t" + sp2.isLocalMode(i) );
     }
-  //   System.out.println( "histogram:" );
-  //   sp2.printHistogram( 50 );
+    System.out.println(sp2.getLocalModes());
+    System.out.println( "histogram:" );
+    sp2.printHistogram( 50 );
    }
 
 }//end StatPrinterApp
