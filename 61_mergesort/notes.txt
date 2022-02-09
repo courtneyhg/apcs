@@ -1,0 +1,21 @@
+Soggy Crackers - Courtney, Kaitlin
+APCS pd06
+HW61 -- Instructions so Simple
+2022-02-08
+time spent: 0.25 hrs
+
+DISCO:
+- Observed: Each thinker splits their deck of cards in half and does not keep any; the thinker assumes their deck is sorted unless it is only one card;
+- A thinker in possession of cards can only interact with 2 other people, so once they hand their cards away, they can now receive more cards
+
+QCC:
+- If there are more cards than there are thinkers, how would the distribution of cards work? (in the case of our class)
+
+THINKER FIRMWARE (instructions each turtle follows)
+If in possession of cards:
+1) If the deck in hand is greater than 1 tall and is NOT sorted, split the deck in half and give each half to an open-handed thinker\
+2) If you have two sorted decks in hand, merge and sort the decks by turning them face down. Compare the top cards of each deck and place the lowest of the two cards in a separate deck. Repeat until you have one sorted deck of cards. Return the deck to the thinker you recieved your deck from.
+
+If not in possession of cards:
+1) If you have never touched a deck, signify this (by raising your hand)
+2) If you have given a deck to someone, signal with your hands that you are now waiting for cards to be returned back to you
