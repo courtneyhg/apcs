@@ -176,13 +176,46 @@ public class Review {
   }
 
   public static int starRating(String fileName){
-    return ((int)Math.random()*5);
+    double totalSentiment = totalSentiment(fileName);
+    if (totalSentiment > 9){
+      return 4;
+    }
+    else if (totalSentiment < 10 && totalSentiment > 4){
+      return 3;
+    }
+    else if (totalSentiment < 5 && totalSentiment > -1){
+      return 2;
+    }
+    else if (totalSentiment < 0){
+      return 1;
+    }
+    else{
+      return 0;
+    }
   }
 
+  public static String fakeReview(String fileName){
+    String review = "";
+    String star = "*";
+    String text = textToString(fileName);
+    String pos = textToString("postiveAdjectives.txt");
+    String[] splitString = text.split(" ");
+    String[] posSplit = pos.split(" ");
+    for (String x : splitString){
+      if ((x.substring(0, 1)).equals(star)){
+        x = posSplit[(int)Math.random()*2];
+      }
+      review = review + x + " ";
+    }
+    return review;
+    }
+
   public static void main(String[] args){
-    System.out.println(sentimentVal("train"));
-    System.out.println(sentimentVal("crash"));
-    System.out.println(sentimentVal("phone"));
-    System.out.println(totalSentiment("SimpleReview.txt"));
+    // System.out.println(sentimentVal("train"));
+    // System.out.println(sentimentVal("crash"));
+    // System.out.println(sentimentVal("phone"));
+    // System.out.println(totalSentiment("SimpleReview.txt"));
+    // System.out.println(starRating("SimpleReview.txt"));
+    System.out.println(fakeReview("SimpleReview.txt"));
   }
 }
