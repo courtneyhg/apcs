@@ -164,13 +164,25 @@ public class Review {
   }
 
   public static double totalSentiment(String fileName){
-    return sentimentVal(textToString(fileName));
+    String text = textToString(fileName);
+    double total = 0.0;
+    // look through every word in the review and use sentimentVal(word)
+    // add the values together (using a counter), return that counter value
+    String[] splitString = text.split(" ");
+    for (String x : splitString){
+          total += sentimentVal(x);
+    }
+    return total;
+  }
+
+  public static int starRating(String fileName){
+    return ((int)Math.random()*5);
   }
 
   public static void main(String[] args){
-    // System.out.println(sentimentVal("train"));
-    // System.out.println(sentimentVal("crash"));
-    // System.out.println(sentimentVal("phone"));
+    System.out.println(sentimentVal("train"));
+    System.out.println(sentimentVal("crash"));
+    System.out.println(sentimentVal("phone"));
     System.out.println(totalSentiment("SimpleReview.txt"));
   }
 }

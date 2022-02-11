@@ -3,9 +3,9 @@ Activity 1
 1b. A string parameter is required. It won't work if another parameter is passed.
 1c. The method returns a double.
 
-2.  System.out.println(sentimentVal("train"));
-    System.out.println(sentimentVal("crash"));
-    System.out.println(sentimentVal("phone"));
+2.  System.out.println(sentimentVal("train"));    0.03
+    System.out.println(sentimentVal("crash"));    -2.05
+    System.out.println(sentimentVal("phone"));    0.19
 
 3a. It would compile because the return type and parameters match.
 3b. It would not compile because the return type and parameters don't match.
