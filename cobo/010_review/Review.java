@@ -37,7 +37,6 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        posAdjectives(temp.toLowerCase());
         //System.out.println(temp); //PRINTS OUT EVERYTHING IN THE POSITIVEADJECTIVES LIST?
         posAdjectives.add(temp);
       }
