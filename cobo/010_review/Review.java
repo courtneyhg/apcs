@@ -37,7 +37,8 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        posAdjectives(temp.toLowerCase());
+        //System.out.println(temp); //PRINTS OUT EVERYTHING IN THE POSITIVEADJECTIVES LIST?
         posAdjectives.add(temp);
       }
       input.close();
@@ -196,16 +197,13 @@ public class Review {
 
   public static String fakeReview(String fileName){
     String review = "";
-    String star = "*";
     String text = textToString(fileName);
-    String pos = textToString("postiveAdjectives.txt");
     String[] splitString = text.split(" ");
-    String[] posSplit = pos.split(" ");
-    for (String x : splitString){
-      if ((x.substring(0, 1)).equals(star)){
-        x = posSplit[(int)Math.random()*2];
+    for (int x = 0; x < splitString.length; x++){
+      if (splitString[x].charAt(0) == '*'){
+        splitString[x] = randomAdjective();
       }
-      review = review + x + " ";
+      review += splitString[x] + " ";
     }
     return review;
     }
