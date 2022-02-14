@@ -1,3 +1,6 @@
+// Soggy Crackers - Courtney, Kaitlin
+// APCS pd06
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
@@ -232,7 +235,7 @@ public class Review {
       }
       return review;
       }
-    
+
   }
 
   public static void main(String[] args){

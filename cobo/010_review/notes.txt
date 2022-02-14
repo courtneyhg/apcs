@@ -1,3 +1,6 @@
+Soggy Crackers - Courtney, Kaitlin
+APCS pd06
+
 Activity 1
 1)
   a) public static double sentimentVal( String word )
