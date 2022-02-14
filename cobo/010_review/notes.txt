@@ -106,9 +106,10 @@ returnText += splitString[x] + " ";
   One other way that this code could be written to achieve the same result is to use a while loop
   if (findBadWords(removePunctuation(splitString[x])) == true){
   while (x==splitString.length-1){
-    splitString[x] = "[REDACTED].";
+    splitString[x] = "[REDACTED]";
+    break;
   }
-  splitString[x] = "[REDACTED]";
+  splitString[x] = "[REDACTED].";
   }
 
 

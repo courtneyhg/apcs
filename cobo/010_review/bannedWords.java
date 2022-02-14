@@ -88,18 +88,36 @@ public class bannedWords{
   }
 
 
+  // public static String removeNoNoWords( String fileName ){
+  //   String returnText = "";
+  //   String text = textToString(fileName);
+  //   String[] splitString = text.split(" ");
+  //   for (int x = 0; x < splitString.length; x++){
+  //     if (findBadWords(removePunctuation(splitString[x])) == true){
+  //       if (x == splitString.length-1){
+  //         splitString[x] = "[REDACTED].";
+  //       }
+  //       else{
+  //         splitString[x] = "[REDACTED]";
+  //       }
+  //     }
+  //
+  //     returnText += splitString[x] + " ";
+  //   }
+  //   return returnText;
+  // }
+
   public static String removeNoNoWords( String fileName ){
     String returnText = "";
     String text = textToString(fileName);
     String[] splitString = text.split(" ");
     for (int x = 0; x < splitString.length; x++){
       if (findBadWords(removePunctuation(splitString[x])) == true){
-        if (x == splitString.length-1){
-          splitString[x] = "[REDACTED].";
-        }
-        else{
-          splitString[x] = "[REDACTED]";
-        }
+      while (x==splitString.length-1){
+        splitString[x] = "[REDACTED]";
+        break;
+      }
+      splitString[x] = "[REDACTED].";
       }
 
       returnText += splitString[x] + " ";
