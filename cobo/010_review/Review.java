@@ -194,6 +194,7 @@ public class Review {
     }
   }
 
+/*
   public static String fakeReview(String fileName){
     String review = "";
     String text = textToString(fileName);
@@ -206,6 +207,33 @@ public class Review {
     }
     return review;
     }
+    */
+
+  public static String fakeReview(String fileName){
+    String review = "";
+    String text = textToString(fileName);
+    String[] splitString = text.split(" ");
+    if ((int)Math.random()*2 == 1){
+      for (int x = 0; x < splitString.length; x++){
+        if (splitString[x].charAt(0) == '*'){
+          splitString[x] = randomPositiveAdj() + " and " + randomPositiveAdj();
+        }
+        review += splitString[x] + " ";
+      }
+      return review;
+    }
+
+    else {
+      for (int x = 0; x < splitString.length; x++){
+        if (splitString[x].charAt(0) == '*'){
+          splitString[x] = randomNegativeAdj() + " and " + randomNegativeAdj();
+        }
+        review += splitString[x] + " ";
+      }
+      return review;
+      }
+    
+  }
 
   public static void main(String[] args){
     // System.out.println(sentimentVal("train"));
