@@ -44,7 +44,7 @@ public class QueenBoard
    */
    private boolean solveH( int col )
    {
-    if (col == _board.length){ // base case: you want to have the same number of queens as there are columns
+    if (col == _board.length-1){ // base case: you want to have the same number of queens as there are columns
       return true;
     }
     for (int row = 0; row < _board.length; row++){
@@ -221,7 +221,7 @@ public class QueenBoard
     */
     b.solve();
     System.out.println("___________________________________");
-    QueenBoard c = new QueenBoard(8);
+    QueenBoard c = new QueenBoard(4);
     c.solve();
   }
 }//end class
