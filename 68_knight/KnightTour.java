@@ -200,7 +200,7 @@ class TourFinder
       //mark current cell with current move number
       _board[x][y] = moves;
 
-      System.out.println( this ); //refresh screen
+      //System.out.println( this ); //refresh screen
 
       //delay(1000); //uncomment to slow down enough to view
 
@@ -214,13 +214,7 @@ class TourFinder
        *     .  h  .  a  .
       ******************************************/
 
-      // for(moves = moves + 1; moves<_sideLength*_sideLength; moves++){
-      //   findTour(x+2,y+1,moves);
-      //   if (_solved == false){
-      //     findTour(x+1, y+2, moves);
-      //   }
-      // }
-
+      // order here does not matter as long as you have all the possibilities
       findTour(x+1, y+2, moves +1);
       findTour(x+1, y-2, moves +1);
       findTour(x+2, y+1, moves +1);
