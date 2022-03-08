@@ -1,0 +1,24 @@
+// Soggy Crackers: Kaitlin, Courtney, Ari
+// APCS pd06
+// HW71 -- Whut Dis
+// 2022-3-7
+// time spent: 0.5 hrs
+
+/*
+DISCO:
+- Everything to the right of arr[c] is less than arr[c] and everything to the left is less
+QCC:
+- What is this function supposed to do?
+q0:
+- Separate numbers? Arrange them?
+q1: O(n) (one for loop)
+
+v = arr[c]
+swap arr[c], arr[b]
+s = a
+for i in [a..b-1]
+  if arr[i] < v
+    swap arr[s], arr[i]
+    s+=1
+swap arr[b], arr[s]
+*/
