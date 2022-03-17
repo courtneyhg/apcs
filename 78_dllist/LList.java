@@ -3,7 +3,7 @@ Duolingo -- Brianna Tieu, Courtney Huang, and Xinqing Lin
 APCS pd6
 HW78 -- Double Up
 2022-03-16
-time spent: hrs
+time spent: 1.3 hrs
 DISCO:
 * To get the node after the one that is next to it we can use the method getNext() twice (tmp.getNext().getNext())
 QCC:
@@ -94,11 +94,12 @@ public class LList implements List //interface def must be in this dir
     String data;
 
     if (_size == 1) {
-      data = _head.getNext().getCargo();
-      _head.setCargo( null );
-      _tail.setCargo( null );
-      _head.setNext( _tail );
-      _tail.setPrevious( _head );
+      data = _head.getCargo();
+      _head = null;
+      _tail = null;
+
+      //_head.setNext( null );
+      //_tail.setPrevious( null );
 
     }
     else if (index == 0) {
@@ -121,7 +122,6 @@ public class LList implements List //interface def must be in this dir
         tmp.setNext( tmp.getNext().getNext() ); //setting the next node of the node at index - 1 to be the node at index + 1
                                             //(this is so that we "skip over" the node we're trying to remove)
 
-        //tmp.getNext().getNext().setPrevious( tmp );
         tmp.getNext().setPrevious( tmp );
       }
       _size--; //decrementing size
