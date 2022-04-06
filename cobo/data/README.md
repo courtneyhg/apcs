@@ -15,7 +15,7 @@ Activity 1
 
 4. try to parse integers? look for commonalities across data in different rows?
 
-5. health, sorts
+5. health, sports
 
 6. How can we live longer? What is the best way to shoot a basketball?
 
