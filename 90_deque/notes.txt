@@ -1,0 +1,5 @@
+Duolingo -- Brianna Tieu, Courtney Huang, and Xinqing Lin
+APCS pd6
+HW90 -- Swabbing the Deque
+2022-04-12
+time spent: hr
