@@ -1,8 +1,16 @@
+/*
+Duolingo -- Brianna Tieu, Courtney Huang, and Xinqing Lin
+APCS pd6
+HW90 -- Swabbing the Deque
+2022-04-12
+time spent: 0.5 hr
+*/
+
 import java.util.LinkedList;
-public class LLDeque<QUASAR> implements Deque<QUASAR> {
+public class YourImplementationOfDeque<QUASAR> implements Deque<QUASAR> {
   private LinkedList<QUASAR> mouse;
 
-  public LLDeque() {
+  public YourImplementationOfDeque() {
     mouse = new LinkedList<QUASAR>();
   }
 
@@ -31,12 +39,28 @@ public class LLDeque<QUASAR> implements Deque<QUASAR> {
     return mouse.peekLast();
   }
 
+  public QUASAR getLast() {
+    return mouse.getLast();
+  }
+
+  public QUASAR getFirst() {
+    return mouse.getFirst();
+  }
+
+  public QUASAR pollLast() {
+    return mouse.pollLast();
+  }
+
+  public QUASAR pollFirst() {
+    return mouse.pollLast();
+  }
+
   public int size(){
     return mouse.size();
   }
 
   public static void main(String[] args) {
-      LLDeque test = new LLDeque();
+      YourImplementationOfDeque test = new YourImplementationOfDeque();
       test.addLast( "first" );
       test.addLast( "second" );
       test.addLast( "third" );
@@ -47,8 +71,8 @@ public class LLDeque<QUASAR> implements Deque<QUASAR> {
       System.out.println("Peek first: " + test.peekFirst());
       System.out.println("Peek last: " + test.peekLast());
 
-      System.out.println("removing last: " + test.removeLast());
-      System.out.println("removing first: " + test.removeFirst());
+      System.out.println("Removing last: " + test.removeLast());
+      System.out.println("Removing first: " + test.removeFirst());
 
       System.out.println("Peek first: " + test.peekFirst());
       System.out.println("Peek last: " + test.peekLast());
@@ -56,5 +80,12 @@ public class LLDeque<QUASAR> implements Deque<QUASAR> {
       test.addFirst("surprise");
       System.out.println("Peek first: " + test.peekFirst());
 
+      System.out.println("Polling first: " + test.pollFirst());
+      System.out.println("Polling last: " + test.pollLast());
+
+      System.out.println("Get first: " + test.getFirst());
+      System.out.println("Get last: " + test.getLast());
+
+      System.out.println("Size: " + test.size());
     }
 }
