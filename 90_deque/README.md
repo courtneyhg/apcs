@@ -17,3 +17,4 @@
 - public QUASAR pollLast();
 - public QUASAR pollFirst();
 - public int size();
+- public boolean contains(QUASAR x);
