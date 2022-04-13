@@ -7,10 +7,10 @@ time spent: 0.5 hr
 */
 
 import java.util.LinkedList;
-public class YourImplementationOfDeque<QUASAR> implements Deque<QUASAR> {
+public class LLDeque<QUASAR> implements Deque<QUASAR> {
   private LinkedList<QUASAR> mouse;
 
-  public YourImplementationOfDeque() {
+  public LLDeque() {
     mouse = new LinkedList<QUASAR>();
   }
 
@@ -60,7 +60,7 @@ public class YourImplementationOfDeque<QUASAR> implements Deque<QUASAR> {
   }
 
   public static void main(String[] args) {
-      YourImplementationOfDeque test = new YourImplementationOfDeque();
+      LLDeque test = new LLDeque();
       test.addLast( "first" );
       test.addLast( "second" );
       test.addLast( "third" );
