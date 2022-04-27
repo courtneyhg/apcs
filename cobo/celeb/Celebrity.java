@@ -2,7 +2,7 @@
 // apcs pd06
 // L09 -- Celeb
 // 2022-04-27
-// time spent: __ hrs
+// time spent: 2.0 hrs
 
 /**
  * Celebrity base class for the Celebrity game.
@@ -76,5 +76,4 @@ public class Celebrity
 	{
 		return "The celebrity is " + _answer + " and your clue is " + _clue;
 	}
-
 }

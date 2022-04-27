@@ -1,3 +1,9 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// apcs pd06
+// L09 -- Celeb
+// 2022-04-27
+// time spent: 2.0 hrs
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,9 +24,6 @@ import javax.swing.SpringLayout;
  */
 public class StartPanel extends JPanel
 {
-  private JRadioButton bobradio;
-  private String olivia;
-
   /**
    * Reference to the Game to call methods.
    */
@@ -50,6 +53,7 @@ public class StartPanel extends JPanel
   /**
    * Customize the JRadioButton for the class created sub class
    */
+   private JRadioButton musicRadio;
 
   /**
    * Label to guide the user to what should be inputted.
@@ -94,7 +98,7 @@ public class StartPanel extends JPanel
   /**
    * String to populate the clueLabel if Class Generated Celebrity is picked.
    */
-
+  private String musicClue;
 
   /**
    * String used for static text in label.
@@ -117,15 +121,15 @@ public class StartPanel extends JPanel
   public StartPanel(CelebrityGame controller)
   {
     super();
-    bobradio = new JRadioButton("Music Celebrity");
-    olivia = "Music";
     this.controller = controller;
     this.panelLayout = new SpringLayout();
     this.typeGroup = new ButtonGroup();
     this.celebrityRadio = new JRadioButton("Celebrity");
     this.literatureRadio = new JRadioButton("Literature Celebrity");
+    this.musicRadio = new JRadioButton("Music Celebrity");
     this.celebrityClue = "Enter the clue for the celebrity";
     this.literatureClue = "Enter the clues for the literature celeb separated by commas";
+    this.musicClue = "Enter the clues for the music celeb separated by commas";
     this.clueLabel = new JLabel(celebrityClue);
 
     this.answerField = new JTextField("Type celebrity here (4 letters minimum thx Cher)");
@@ -162,9 +166,9 @@ public class StartPanel extends JPanel
     {
       validClue = controller.validateClue(clueText, "Literature");
     }
-    else if (bobradio.isSelected())
+    else if (musicRadio.isSelected())
     {
-      validClue = controller.validateClue(clueText, "Music")
+      validClue = controller.validateClue(clueText, "Music");
     }
     else
     {
@@ -185,9 +189,8 @@ public class StartPanel extends JPanel
    */
   private void setupPanel()
   {
-    // Adds the RadioButtons to the group so only one can be selected.
-    this.add(bobradio);
-    typeGroup.add(bobradio);
+    this.add(musicRadio);
+    typeGroup.add(musicRadio);
   }
 
   /**
@@ -210,9 +213,9 @@ public class StartPanel extends JPanel
 
     //Put your custom radio button info here
 
-    panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, bobradio);
-    panelLayout.putConstraint(SpringLayout.WEST, bobradio, 0, SpringLayout.WEST, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.NORTH, bobradio, 10, SpringLayout.SOUTH, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, musicRadio);
+    panelLayout.putConstraint(SpringLayout.WEST, musicRadio, 0, SpringLayout.WEST, celebrityRadio);
+    panelLayout.putConstraint(SpringLayout.NORTH, musicRadio, 10, SpringLayout.SOUTH, celebrityRadio);
     panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, celebrityRadio);
 
     panelLayout.putConstraint(SpringLayout.NORTH, clueLabel, 10, SpringLayout.SOUTH, answerField);
@@ -271,7 +274,7 @@ public class StartPanel extends JPanel
      */
     literatureRadio.addActionListener(select -> clueLabel.setText(literatureClue));
     celebrityRadio.addActionListener(select -> clueLabel.setText(celebrityClue));
-    bobradio.addActionListener(select -> clueLabel.setText(yourCelebrityClue));
+    musicRadio.addActionListener(select -> clueLabel.setText(musicClue));
 
   }
 
@@ -290,9 +293,8 @@ public class StartPanel extends JPanel
     {
       type = "Literature";
     }
-    else if (bobradio.isSelected())
-    {
-      type = "Music";
+    else if (musicRadio.isSelected()) {
+      type = "music";
     }
     String answer = answerField.getText().trim();
     String clue = clueField.getText().trim();

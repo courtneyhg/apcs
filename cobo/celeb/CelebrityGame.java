@@ -1,3 +1,9 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// apcs pd06
+// L09 -- Celeb
+// 2022-04-27
+// time spent: 2.0 hrs
+
 import java.util.ArrayList;
 
 /**
@@ -30,7 +36,6 @@ public class CelebrityGame
 	{
 		gameWindow = new CelebrityFrame(this);
 		gameCelebrity = null;
-		celebGameList = new ArrayList<Celebrity>();
 	}
 
 	/**
@@ -38,8 +43,8 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-		this();
-		gameWindow.replaceScrren("START");
+		celebGameList = new ArrayList<Celebrity>();
+		gameWindow.replaceScreen("START");
 	}
 
 	/**
@@ -75,7 +80,7 @@ public class CelebrityGame
 	{
 		if (celebGameList != null && celebGameList.size() > 0) {
 			this.gameCelebrity = celebGameList.get(0);
-			gameWindow.replaceScrren("GAME");
+			gameWindow.replaceScreen("GAME");
 		}
 	}
 
@@ -95,8 +100,11 @@ public class CelebrityGame
 		// 	celebGameList.add( new Celebrity( name, guess ));
 		// }
 		Celebrity currentCelebrity;
-		if (type.equals("Literature")){
+		if (type.equals("Literature")) {
 			currentCelebrity = new LiteratureCelebrity(name, guess);
+		}
+		else if (type.equals("Music")) {
+			currentCelebrity = new MusicCelebrity(name, guess);
 		}
 		else {
 			currentCelebrity = new Celebrity(name, guess);
@@ -124,20 +132,28 @@ public class CelebrityGame
 	public boolean validateClue(String clue, String type)
 	{
 		boolean validClue = false;
-		if (clue.trim().length() >= 10){
+		if (clue.trim().length() >= 10) {
 			validClue = true;
-			if (type.equalsIgnoreCase("literature")){
+			if (type.equalsIgnoreCase("literature")) {
 				String[] temp = clue.split(",");
-				if (temp.length > 1){
+				if (temp.length > 1) {
 					validClue = true;
 				}
-				else{
+				else {
 					validClue = false;
 				}
 			}
+			else if (type.equalsIgnoreCase("music")) {
+				String[] temp = clue.split(",");
+				if (temp.length > 1) {
+					validClue = true;
+			} else {
+				validClue = false;
+			}
 		}
-		return validClue;
 	}
+	return validClue;
+}
 
 	/**
 	 * Accessor method for the current size of the list of celebrities
