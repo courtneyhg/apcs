@@ -37,3 +37,6 @@ Activity 4
 1. Class Name: MusicCelerity
     Attributes:  All inherited from Celebrity, Arraylist<String> clueList
     Behaviors: All inherited from Celebrity, String getClue()
+17.
+18.
+19. extends
