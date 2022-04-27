@@ -11,7 +11,7 @@ that will "trim" out the spaces in the beginning and/or end of the String.
 that the Celebrity can "draw" a new clue.
 
 QCC
-0.
+0. How do we get the GUI to work? -- Is it because I am on windows?
 
 =============================
 
@@ -37,6 +37,7 @@ Activity 4
 1. Class Name: MusicCelerity
     Attributes:  All inherited from Celebrity, Arraylist<String> clueList
     Behaviors: All inherited from Celebrity, String getClue()
-17.
-18.
+17. @Override
+18. super keyword
 19. extends
+20. subclass constructor
