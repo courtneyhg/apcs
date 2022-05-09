@@ -1,4 +1,4 @@
-Kick-Ass Girls :: Blossom, Bubbles, Buttercup
+FIRE: Fang Chen, Courtney Huang, Brianna Tieu
 APCS pd6
 HW93 -- exploring tree properties, extracting actionable intel from traversals
 2022-05-05r
