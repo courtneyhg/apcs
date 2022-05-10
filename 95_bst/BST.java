@@ -1,4 +1,4 @@
-// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// FIRE : Fang Chen, Courtney Huang, Brianna Tieu
 // APCS pd06
 // HW 95 -- Algorithm as Data Structure
 // 2022-05-09
