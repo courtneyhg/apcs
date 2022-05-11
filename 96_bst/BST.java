@@ -200,6 +200,29 @@ public class BST
     return counter;
   }
 
+  // tried this didnt work for some cases...
+  // public int numLeaves()
+  // {
+  //  TreeNode left = _root.getLeft();
+  //  TreeNode right = _root.getRight();
+  //  int counter = 1;
+  //  while (left != null){
+  //    if ((left.getLeft() == null) && (left.getRight() == null)){
+  //      System.out.println("o");
+  //      counter ++;
+  //    }
+  //    left = left.getLeft();
+  //  }
+  //  while (right != null){
+  //    if ((right.getLeft() == null) && (right.getRight() == null)){
+  //      System.out.println("p");
+  //      counter ++;
+  //    }
+  //    right = right.getRight();
+  //  }
+  //  return counter;
+  // }
+
 
   //main method for testing
   public static void main( String[] args )
